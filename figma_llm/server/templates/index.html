@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LLM App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+        .response {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .history {
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .history-item {
+            margin-bottom: 10px;
+        }
+        .history-prompt {
+            font-weight: bold;
+        }
+        .history-response {
+            margin-top: 5px;
+        }
+        .streaming {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.querySelector("form");
+            var responseContainer = document.querySelector(".response");
+            var historyContainer = document.querySelector(".history");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                var prompt = document.querySelector("textarea[name='prompt']").value;
+
+                fetch("/stream", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: "prompt=" + encodeURIComponent(prompt)
+                })
+                .then(function (response) {
+                    var reader = response.body.getReader();
+                    var decoder = new TextDecoder("utf-8");
+                    var responseText = "";
+
+                    function readChunk() {
+                        return reader.read().then(function (result) {
+                            if (result.done) {
+                                var historyItem = document.createElement("div");
+                                historyItem.classList.add("history-item");
+                                historyItem.innerHTML = `
+                                    <p class="history-prompt">${prompt}</p>
+                                    <p class="history-response streaming">${responseText}</p>
+                                `;
+                                historyContainer.appendChild(historyItem);
+                                return;
+                            }
+                            var chunk = decoder.decode(result.value, { stream: true });
+                            responseText += chunk;
+                            responseContainer.querySelector(".streaming").textContent = responseText;
+                            return readChunk();
+                        });
+                    }
+
+                    readChunk();
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Figma LLM Management</h1>
+    <form method="POST">
+        <label for="prompt">Prompt:</label><br>
+        <textarea name="prompt" rows="5" cols="50">{{ prompt }}</textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div class="response">
+        <h2>Response:</h2>
+        <p class="streaming"></p>
+    </div>
+    <div class="history">
+        <h2>History</h2>
+        {% for item in history %}
+        <div class="history-item">
+            <p class="history-prompt">{{ item.prompt }}</p>
+            <p class="history-response streaming">{{ item.response }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

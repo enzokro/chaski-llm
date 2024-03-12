@@ -1,0 +1,1 @@
+python scripts/run_llm.py --prompt "Hello, how are you?" --max_tokens 50 --temperature 0.7

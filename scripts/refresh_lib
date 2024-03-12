@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# force update the package
+pip install llama-cpp-python --upgrade --force-reinstall --no-cache-dir

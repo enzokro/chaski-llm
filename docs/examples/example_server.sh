@@ -1,0 +1,1 @@
+python figma_llm/main.py --server
