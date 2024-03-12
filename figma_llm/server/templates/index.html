@@ -34,12 +34,17 @@
         }
         .history-item {
             margin-bottom: 10px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
         }
         .history-prompt {
             font-weight: bold;
+            color: #333;
         }
         .history-response {
             margin-top: 5px;
+            color: #666;
         }
         .streaming {
             white-space: pre-wrap;
@@ -75,7 +80,7 @@
                                 historyItem.classList.add("history-item");
                                 historyItem.innerHTML = `
                                     <p class="history-prompt">${prompt}</p>
-                                    <p class="history-response streaming">${responseText}</p>
+                                    <p class="history-response">${responseText}</p>
                                 `;
                                 historyContainer.appendChild(historyItem);
                                 return;
@@ -94,7 +99,7 @@
     </script>
 </head>
 <body>
-    <h1>Figma LLM Management</h1>
+    <h1>Figma LLM</h1>
     <form method="POST">
         <label for="prompt">Prompt:</label><br>
         <textarea name="prompt" rows="5" cols="50">{{ prompt }}</textarea><br>
@@ -109,7 +114,7 @@
         {% for item in history %}
         <div class="history-item">
             <p class="history-prompt">{{ item.prompt }}</p>
-            <p class="history-response streaming">{{ item.response }}</p>
+            <p class="history-response">{{ item.response }}</p>
         </div>
         {% endfor %}
     </div>

@@ -1,7 +1,7 @@
 import fire
 import logging
 from typing import Any
-from figma_llm.model.llm_manager import LLMManager
+from figma_llm.models.llm_manager import LLMManager
 from figma_llm.utils.args import parse_args
 from figma_llm.utils.config import Config
 

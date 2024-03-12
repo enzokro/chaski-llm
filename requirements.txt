@@ -1,4 +1,9 @@
+numpy
 llama-cpp-python
+fastcore
+spacy
+nltk
 flask
 fire
 pyzmq
+nbdev

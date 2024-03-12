@@ -1,7 +1,7 @@
 import argparse
 import zmq
 import logging
-from figma_llm.model.llm_manager import LLMManager
+from figma_llm.models.llm_manager import LLMManager
 from figma_llm.utils.config import Config
 
 logger = logging.getLogger(__name__)
