@@ -137,13 +137,6 @@ models/
 .DS_Store
 Thumbs.db
 
-# Others
-*.csv
-*.json
-*.txt
-*.yaml
-*.yml
-
 # Exclude specific config files or secrets
 config.json
 secret.yaml
