@@ -1,2 +1,0 @@
- * Serving Flask app 'figma_llm.server.api'
- * Debug mode: off

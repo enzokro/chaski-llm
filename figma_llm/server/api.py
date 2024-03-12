@@ -15,11 +15,20 @@ def run_server(
         host: str, 
         port: int, 
         model_path: str = "",
-        embedding: bool = False,
+        use_embeddings: bool = False,
         chat_format: Optional[str] = None,
+        **kwargs,
     ):
+
+    # start the LLM backend
     model_path = model_path or Config.MODEL_PATH
-    llm_manager = LLMManager(model_path=model_path, embedding=embedding, chat_format=chat_format)
+    llm_manager = LLMManager(
+        model_path=model_path,
+        use_embeddings=use_embeddings,
+        chat_format=chat_format,
+    )
+
+    # TODO: hook in embedding storage
 
     @app.route("/", methods=["GET", "POST"])
     def index() -> Union[str, Response]:

@@ -7,3 +7,6 @@ flask
 fire
 pyzmq
 nbdev
+sentence-transformers
+transformers
+torch
