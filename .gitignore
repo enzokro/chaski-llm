@@ -120,8 +120,6 @@ cython_debug/
 
 # Large files and directories for machine learning models and datasets
 # Depending on your project's structure, adjust paths as necessary
-data/
-models/
 *.pkl
 *.h5
 *.pt
