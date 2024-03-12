@@ -1,5 +1,5 @@
-from llm_manager import LLMManager
-from db import EmbeddingStorage
+from figma_llm.models.llm_manager import LLMManager
+from figma_llm.embeds.db import EmbeddingStorage
 
 # Initialize the LLMManager and EmbeddingStorage
 ################################################################
