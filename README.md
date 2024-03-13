@@ -25,6 +25,7 @@ figma_llm/
 ├── models/              # LLM interaction
 │   └── llm_manager.py   # Manages LLM interactions and RAG workflows
 ├── server/              # Server setup and web interface
+│   ├── run.py           # Server startup script
 │   ├── web_api.py       # Server startup script
 │   └── templates/       # HTML templates for the web interface
 └── utils/               # Utility functions and classes
@@ -34,6 +35,20 @@ figma_llm/
 ├── app.py               # Application entry point
 ```
 
+- `embeds/`: Contains modules for embedding storage and extraction.
+  - `db.py`: Defines the EmbeddingStorage class for storing and retrieving embeddings.
+  - `extract.py`: Defines the EmbeddingModel class for extracting embeddings from text.
+- `models/`: Contains the LLM-related modules.
+  - `llm_manager.py`: Defines the LLMManager class for interacting with the Llama library and managing the RAG workflow.
+- `server/`: Contains the server-related modules.
+  - `web_api.py`: Defines the API endpoints and routes for the web interface.
+  - `run.py`: A script for running the web server.
+  - `templates/`: Contains HTML templates for the web interface.
+- `utils/`: Contains utility modules.
+  - `config.py`: Defines the configuration classes for the application.
+  - `distances.py`: Provides distance calculation functions for similarity search.
+  - `txt_chunk.py`: Provides text chunking utilities.
+- `app.py`: The main entry point of the application.
 
 ## Getting Started
 
