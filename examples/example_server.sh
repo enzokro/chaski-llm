@@ -1,1 +1,1 @@
-python figma_llm/main.py --server
+python figma_llm/app.py

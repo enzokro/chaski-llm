@@ -141,3 +141,4 @@ secret.yaml
 
 # Add entries specific to llama.cpp and HuggingFace if they generate any unique files
 *.gguf
+*.npz

@@ -1,0 +1,290 @@
+Thank you. For more context, the code you just saw above was refactored from the original versions we worked on based on the `<CHASKI>` style. Please find attached two documents: 
+
+```markdown
+- `chaski_guide.md`.  
+- `chaski_overview.md`.
+```  
+
+These describe the `<CHASKI>` style and overall state. It is based, as you can see, on a combined and refined programming philosophy distilled from:   
+```markdown
+- lucidrains, aka Phil Wang.  
+- Jeremy Howard, from fast.ai  
+- Georgi Gerganov, from the llama.cpp library
+```  
+
+Please, read and integrate the new `<CHASKI>` style. Analyze it, critique it, evaluate it. Where are its weakpoints? How could it be improved? Internally, generate a series of genetic improvements and synthesize them into an optimal approach. Then, describe your new updated version of the `<CHASKI>` style.  
+
+`chaski_guide.md`
+```
+The <CHASKI> Style Guide integrates the essence of <JEREMY_HOWARD>, <LUCIDRAINS>, and <GGML> into a unified approach to software development. This comprehensive method emphasizes data-driven decision-making, modular design, clear documentation, and a strong focus on community and collaboration. Here's a detailed breakdown of each principle:
+
+**Emphasis on Data-Driven Decision Making**  
+
+- Experimentation and Metrics: Advocates for basing decisions on empirical data, using experimentation, performance benchmarking, and A/B testing to guide development choices.    
+- User-Centric Design: Prioritizes gathering and analyzing user feedback to ensure the software meets real user needs and expectations, aligning product development with user satisfaction.   
+- Iterative Improvement: Encourages the use of data to identify areas for optimization and enhancement, fostering a culture of continuous improvement.  
+- Risk Management: Employs data analysis to assess potential risks and make informed decisions, minimizing the impact of unforeseen issues on project timelines and outcomes.  
+  
+  
+**Modular and Composable Design**  
+
+- Building for Extension: Promotes designing software components that are extensible and composable, facilitating easy integration and future expansion.  
+- Decoupling and Independence: Stresses the importance of creating loosely coupled components that can operate independently, enhancing the system's flexibility and resilience.  
+- Reuse and Efficiency: Encourages the development of reusable modules to reduce redundancy, speed up development, and maintain consistency across projects.  
+- Design Patterns: Recommends leveraging established design patterns to solve common problems in a modular and scalable way, benefiting from the collective experience of the developer community.  
+
+
+**Commitment to Clean and Transparent Documentation**  
+
+- Living Documentation: Ensures that documentation evolves with the codebase, providing clear, up-to-date guidance and insights into the system's functionality and architecture.  
+- Accessibility and Inclusivity: Aims to make documentation accessible to all potential users, regardless of their expertise level, fostering a more inclusive developer and user community.  
+- Best Practices and Guidelines: Includes documentation of coding standards, best practices, and style guidelines to promote code quality and consistency.  
+- Knowledge Sharing: Facilitates the sharing of knowledge and expertise through well-documented code, contributing to the professional growth of the team and the wider community.  
+
+**Community and Collaboration Focus**  
+- Openness and Sharing: Emphasizes the importance of sharing knowledge, code, and experiences within and beyond the team, adopting open-source principles whenever possible.  
+- Peer Review and Feedback: Integrates regular code reviews and constructive feedback into the development process, improving code quality and fostering team cohesion.  
+- Cross-Functional Collaboration: Encourages collaboration across different disciplines and areas of expertise, breaking down silos and leveraging diverse perspectives for better solutions.  
+- Community Engagement: Promotes active engagement with the broader development community, contributing to open-source projects, participating in forums, and attending conferences to stay connected and informed.   
+
+
+**Conclusion**
+
+By embracing these principles, the <CHASKI> Style Guide offers a pathway to creating software that is not only functionally robust but also a testament to the collaborative, thoughtful, and dynamic nature of modern software development. This guide serves as a solid foundation for developers to build upon, ensuring their work is not only effective but also reflective of best practices and shared wisdom.
+```
+
+`chaski_overview.md`
+```
+The <CHASKI> style represents an evolved approach to software development, emphasizing clarity, maintainability, performance, and aesthetic elegance. This style has been honed through the synthesis of various coding philosophies, including but not limited to the intuitive and straightforward designs of Jeremy Howard's fast.ai and the innovative, modular approaches of Phil Wang's lucidrains. Below, we delve into the key principles of the <CHASKI> style, illustrated with code snippets and design strategies employed in our journey.
+
+1. Clarity and Simplicity
+Code should be as intuitive to read as plain English, with a focus on minimizing cognitive load. Names (variables, functions, classes) should be self-explanatory, and complex logic should be broken down into digestible pieces.
+
+```python
+# BAD
+def f(a, b):
+    return a + b if a > 10 else a - b
+
+# GOOD
+def calculate_result_based_on_condition(first_number, second_number):
+    if first_number > threshold:
+        return add_numbers(first_number, second_number)
+    return subtract_numbers(first_number, second_number)
+
+def add_numbers(a, b):
+    return a + b
+
+def subtract_numbers(a, b):
+    return a - b
+
+threshold = 10
+```
+
+2. Modularity and Reusability
+Code should be organized in a way that promotes reuse. Functions and classes should perform one task and do it well, following the Single Responsibility Principle. Modular code not only enhances readability but also facilitates testing and maintenance.
+
+```python
+# Instead of a monolithic function:
+def process_data_and_generate_report(data):
+    # Process data...
+    # Generate report...
+    pass
+
+# Split functionality:
+def process_data(data):
+    # Process data...
+    pass
+
+def generate_report(processed_data):
+    # Generate report...
+    pass
+```
+
+3. Aesthetic Elegance
+Beyond functionality, the <CHASKI> style values the aesthetic aspect of coding. This includes proper indentation, consistent naming conventions, and thoughtful organization of code blocks. Aesthetic elegance makes the codebase inviting and improves developer engagement.  
+
+```html
+/* Consistent naming and indentation in CSS */
+:root {
+    --primary-color: #005792;
+    --secondary-color: #e8f1f5;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--primary-color);
+}
+
+.button {
+    background-color: var(--secondary-color);
+    border: none;
+}
+```
+
+
+4. Performance Awareness
+While maintaining clarity and elegance, <CHASKI> encourages developers to be mindful of the performance implications of their code. This means choosing efficient algorithms, being aware of time and space complexity, and optimizing resource usage without compromising code quality.
+
+```python
+# Instead of inefficiently concatenating strings in a loop:
+result = ""
+for s in strings:
+    result += s
+
+# Use a more efficient join method:
+result = "".join(strings)
+```  
+
+
+5. Comprehensive Documentation and Testing
+Every function, class, and module should be accompanied by clear documentation that explains its purpose, inputs, outputs, and any side effects. Unit tests are equally important, ensuring the code not only works as intended but continues to do so as the system evolves.  
+
+```python
+def calculate_area_of_circle(radius):
+    """
+    Calculate the area of a circle given its radius.
+
+    Parameters:
+    radius (float): The radius of the circle.
+
+    Returns:
+    float: The area of the circle.
+    """
+    return 3.14159 * radius ** 2
+
+# Test
+assert calculate_area_of_circle(3) == 28.27431
+```
+
+6. Embracing Modern Technologies and Practices
+The <CHASKI> style encourages staying up-to-date with the latest technologies and best practices. This includes leveraging modern language features, frameworks, and tools that enhance productivity, security, and the overall quality of the codebase.  
+
+```javascript
+// Use modern JavaScript features for cleaner code
+const fetchData = async () => {
+    try {
+        const response = await fetch('https://api.example.com/data');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Fetching data failed:', error);
+    }
+}
+```
+
+Conclusion
+The <CHASKI> style is a holistic approach to software development that balances the art and science of coding. It's about writing code that not only machines can execute efficiently but humans can read and understand effortlessly. Through the principles of clarity, modularity, aesthetic elegance, performance awareness, comprehensive documentation, and embracing modern technologies, <CHASKI> aims to elevate the craft of programming to new heights, making software development more enjoyable and productive.
+```
+
+
+Thank you. Now, please find a series of attached files that are concrete, practical, production-grade examples of the <CHASKI> design philosophy and coding approach. 
+
+```markdown
+- `app.py`    
+- `llm_manager.py`   
+- `db.py`  
+- `extract.py`  
+- `web_api.py`  
+```
+
+These files are used to create a workflow for interacting with LLMs. Specifically, they are used to chat/instruct an LLM, with a Retrieval-Augmented Generation (RAG) workflow. A RAG workflow embeds a series of documents into an external knowledge base. At runtime, given a new a user query, the system finds the document embeddings that most closely match the user query. Then, it inserts the relevant text from these matching embeddings into the prompt, below the user's query, and this becomes the new augmented prompt. Below are more details:
+
+RAG Workflow Details:
+```markdown
+1. The user makes an initial query.  
+2. Assuming there is an existing set of embeddings, we find the top-n most relevant (by cosine distance) embeddings.  
+3. Then, we insert the text of these embeddings into the prompt, underneath the user's query. We also make it clear to the LLM that this is useful context, coming from a known knowledge base, to help guide its output generation.  
+4. Then we end the prompt, including any final assistant/response setups as needed.  
+```
+
+Next we include a working python example that flexes all of the code we have so far. Specifically, this is for a working RAG example, though a regular chat-based example would look similar. 
+
+RAG Example Description:
+```markdown
+- Initialize the LLM Manager.  
+- - Internally, it managed the EmbeddingStorage and EmbeddingModel.    
+- Embed a series of sample documents.   
+- Save the embeddings to a file.  
+- Load the embeddings from this saved file.  
+- Now, use a new query, or input, that we will pass to the model.  
+- Search the embeddings for the ones that are most similar to this query.  
+- Add the matching text from the relevant embeddings as part of the prompt.  
+- - Make sure the prompt is told this is "context" for its generation.  
+- Finish the generation task, using RAG via the context-augmented prompt with the text from the most similar embeddings.
+```
+
+RAG Example Code:
+```python
+from figma_llm.models.llm_manager import LLMManager
+from figma_llm.embeds.db import EmbeddingStorage
+from figma_llm.utils.config import Config
+
+# regular mistral instruct format
+def prompt_mistral(query, *args, **kwargs):
+    """Generates a prompt formatted for RAG with user query and context."""
+    return f"{query}"
+
+# Define a function to create a RAG-formatted prompt
+def rag_prompt_mistral(query, context):
+    """Generates a prompt formatted for RAG with user query and context."""
+    return f"{query}\nContext for Instructions: ```{context}```:"
+
+
+# Initialize the LLM Manager with the desired chat format
+print("Initializing the LLM Manager...")
+llm_manager = LLMManager(
+    model_path=Config.MODEL_PATH,
+    use_embeddings=True,  # Enable embedding feature
+    embedding_model_info=Config.DEFAULT_EMBEDDINGS  # Use default embedding model settings
+)
+
+# Initialize an empty EmbeddingStorage
+llm_manager.embedding_storage = EmbeddingStorage(Config.DEFAULT_EMBEDDINGS['file_path'])
+
+# Embed and store a series of sample documents
+sample_documents = [
+    "The capital of France is Paris.",
+    "The Eiffel Tower is a famous landmark in Paris.",
+    "France is known for its delicious cuisine, including croissants and baguettes.",
+    "The Louvre Museum in Paris houses the famous painting, the Mona Lisa.",
+]
+
+print("Embedding and storing documents...")
+for doc in sample_documents:
+    llm_manager.embed_and_store(doc)
+
+# Save the embeddings to a file for persistence
+print("Saving the embeddings to a file...")
+llm_manager.embedding_storage._save_to_file()
+
+# Load the embeddings from the saved file
+print("Loading the embeddings from the file...")
+llm_manager.embedding_storage._load_from_file()
+
+# Define a new query to search the embeddings
+query = "Tell me about a famous landmark in France."
+
+# Search the embeddings for the top-n most similar to the query
+print("Searching for similar documents...")
+top_similar = llm_manager.embedding_storage.find_top_n(
+    llm_manager.embedding_model.embed(query), n=2
+)
+
+# Extract the context from the top similar embeddings
+context = "\n".join([text for _, _, text in top_similar])
+
+# Generate a response using the RAG-augmented prompt
+print("Generating the response using RAG...")
+rag_response = llm_manager.generate_response(rag_prompt_mistral(query, context))
+
+# Compare with a standard response without RAG
+print("Generating the response without RAG...")
+response = llm_manager.generate_response(prompt_mistral(query))
+
+# Output the results
+print(f"Query: {query}")
+print(f"Response without RAG:\n{response}")
+
+print(f"Context:\n{context}")
+print(f"RAG-Response:\n{rag_response}")
+```

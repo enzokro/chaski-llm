@@ -13,5 +13,6 @@ class Config:
     DEFAULT_EMBEDDINGS = {
         'model_name': 'sentence-transformers/all-MiniLM-L6-v2',
         'model_library': 'sentence-transformers',
-        'file_path': 'default_embeddings.npz'
+        'file_path': 'data/default_embeddings',
+        'file_format': 'npz',
     }
