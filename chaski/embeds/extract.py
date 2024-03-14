@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-from typing import List, Dict, Optional, Tuple
+from typing import List, Optional, Tuple
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModel
 from llama_cpp import Llama

@@ -4,7 +4,6 @@ from fastcore.basics import store_attr
 from llama_cpp import Llama
 from chaski.utils.config import Config
 from chaski.embeds.engine import EmbeddingsEngine
-from chaski.utils.txt_chunk import chunk_text 
 
 # Initialize logger
 logging.basicConfig(level=logging.INFO)

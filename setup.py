@@ -31,7 +31,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "figma-llm=figma_llm.app:main",
+            "chaski-llm=chaski.app:main",
         ],
     },
     classifiers=[
