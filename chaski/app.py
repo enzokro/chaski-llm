@@ -1,7 +1,9 @@
-import fire
 import logging
-from chaski.server.main import run_app
+import fire
+
 from chaski.utils.config import Config
+from chaski.server.main import run_app
+
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
