@@ -14,7 +14,7 @@ def start(
         use_embeddings: bool = Config.USE_EMBEDDINGS,
         chat_format: str = None,
     ):
-    """Initialize and start the web server."""
+    """Starts the web server."""
     
     # Log starting information
     logger.info(f"Starting server on {host}:{port}")

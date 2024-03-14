@@ -18,4 +18,4 @@ def cosine(x: ArrayLike, y: ArrayLike) -> float:
 
 def ip(x: ArrayLike, y: ArrayLike) -> float:
     """Calculates the inner product similarity between two vectors."""
-    return np.dot(x, y)
+    return 1 - np.dot(x, y)
