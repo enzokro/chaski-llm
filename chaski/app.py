@@ -1,16 +1,17 @@
 import fire
 import logging
-from chaski.server.web_api import run_app
+from chaski.server.main import run_app
+from chaski.utils.config import Config
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def start(
-        host: str = "0.0.0.0", 
-        port: int = 8000, 
-        model_path: str = None, 
-        use_embeddings: bool = False,
+        host: str = Config.HOST, 
+        port: int = Config.PORT, 
+        model_path: str = Config.MODEL_PATH, 
+        use_embeddings: bool = Config.USE_EMBEDDINGS,
         chat_format: str = None,
     ):
     """Initialize and start the web server."""

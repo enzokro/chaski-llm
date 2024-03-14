@@ -1,5 +1,5 @@
 from fastcore.xtras import Path
-from chaski.graphs.graph_builder import GraphBuilder
+from chaski.graphs.builder import GraphBuilder
 
 def main():
     """

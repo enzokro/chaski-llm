@@ -8,6 +8,8 @@ class Config:
         "/Users/cck/repos/llama.cpp/models/Mistral-7B-Instruct-v0.2/mistral-7b-instruct-v0.2.Q4_K_S.gguf",
     )
 
+    USE_EMBEDDINGS = False
+
     MAX_TOKENS = 256
 
     DEFAULT_EMBEDDINGS = {
