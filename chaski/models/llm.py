@@ -72,6 +72,6 @@ class LLM:
     @exception_handler
     def embed_and_store(self, text: str, **kwargs):
         """Chunk text, extract, and store embeddings."""
-        if not hasattr(self, 'embedding_model'):
+        if not hasattr(self, 'embeds'):
             raise ValueError("Embedding model is not initialized.")
         self.embeds.embed_and_store(text, **kwargs)

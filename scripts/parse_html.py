@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from fastcore.xtras import Path
+from chaski.utils.path_utils import get_project_root
 
 # path to content
 base_dir = "/Users/cck/Downloads"
@@ -9,7 +10,7 @@ base_dir = Path(base_dir)
 lessons = base_dir.glob("Lesson*Help Center.html")
 
 # where to save the content
-out_dir = Path("/Users/cck/projects/figma-llm/figma_llm/graphs/documents")
+out_dir = get_project_root() / "data/figma_documents"
 
 for fid in lessons:
     # Read the HTML file
@@ -27,7 +28,7 @@ for fid in lessons:
     # for paragraph in paragraphs:
     #     print(paragraph.get_text())
     # join all paragraphs
-    content = "\n".join([p.get_text() for p in paragraphs])
+    content = "\n".join(p.get_text() for p in paragraphs)
 
     # clean output name for the doc
     name = str(fid.name).replace("– Figma Learn - Help Center.html", "")

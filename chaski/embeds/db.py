@@ -40,7 +40,7 @@ class EmbeddingStorage:
 
     def update(self, id: str, embedding: Optional[np.ndarray] = None, metadata: Optional[Dict] = None, text: Optional[str] = None):
         """Update existing embedding, metadata, and text by ID."""
-        if id in self.embeddings or id in self.metadata or id in self.text_mapping:
+        if id in self.embeddings or id in self.metadata:
             if embedding is not None:
                 self.embeddings[id] = embedding
             if metadata is not None:
@@ -56,7 +56,7 @@ class EmbeddingStorage:
 
     def find_top_n(self, query_embedding: np.ndarray, n: int = 5, largest_first=False) -> List[Tuple[str, float, str]]:
         """Find top-n embeddings most similar to query."""
-        distances = [(id, cosine(query_embedding, emb), self.text_mapping.get(id, "")) for id, emb in self.embeddings.items()]
+        distances = [(id, cosine(query_embedding, emb), self.metadata.get(id, "")["text"]) for id, emb in self.embeddings.items()]
         return sorted(distances, key=lambda x: x[1], reverse=largest_first)[:n]
 
     def _load_from_file(self, file_path: str = ''):
@@ -71,6 +71,6 @@ class EmbeddingStorage:
 
     def _save_to_file(self, file_path: str = ''):
         """Save current state to file."""
-        file_path = file_path or self.file_path
+        file_path = str(file_path or self.file_path)
         np.savez(file_path + f".{self.file_format}", **self.embeddings)
         np.savez(file_path + f'_metadata.{self.file_format}', **self.metadata)
