@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="figma-llm",
+    name="chaski",
     version="0.1.0",
     description="An LLM python server leveraging llama-cpp-python",
     long_description=open("README.md").read(),

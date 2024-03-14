@@ -1,0 +1,84 @@
+<result>
+Key Concepts:
+
+Design systems
+Websites
+Applications
+Style guides
+Component libraries
+Pattern libraries
+Product ecosystem
+UI elements
+Visual language
+Building blocks
+Layouts
+Templates
+Interaction patterns
+Redlines
+Annotations
+Code components
+Documentation
+Consistency
+Efficiency
+Usability
+Accessibility
+Audits
+User flows
+Cross-functional partners
+Contributors
+Audience
+Implementation approaches
+Relationships:
+
+Design systems provide tools and resources to build consistent and cohesive products
+Design systems include style guides, component libraries, and pattern libraries
+Design systems focus on the entire product ecosystem, not just UI elements
+Style guides define the appearance and voice/tone of elements
+Component libraries contain the building blocks of a product
+Component libraries include individual components, layouts, templates, and interaction patterns
+Component libraries often include redlines, annotations, or code components with documentation
+Design systems can improve consistency, efficiency, usability, and accessibility
+Audits help take stock of the entire product and identify areas of improvement
+Audits involve identifying user flows and all elements used in the product
+Audits require collaboration with cross-functional partners
+Contributors are people who help build and maintain the design system
+The audience of a design system includes designers, developers, UX writers, and other teams
+Design systems can be built from the ground up, use parts of existing systems, or a combination of approaches
+Knowledge Graph:
+
+[Design systems] -- provide --> [tools and resources]
+[Design systems] -- build --> [consistent and cohesive products]
+[Design systems] -- include --> [style guides]
+[Design systems] -- include --> [component libraries]
+[Design systems] -- include --> [pattern libraries]
+[Design systems] -- focus on --> [product ecosystem]
+[Style guides] -- define --> [appearance of elements]
+[Style guides] -- define --> [voice and tone of elements]
+[Component libraries] -- contain --> [building blocks of a product]
+[Component libraries] -- include --> [individual components]
+[Component libraries] -- include --> [layouts]
+[Component libraries] -- include --> [templates]
+[Component libraries] -- include --> [interaction patterns]
+[Component libraries] -- include --> [redlines]
+[Component libraries] -- include --> [annotations]
+[Component libraries] -- include --> [code components]
+[Component libraries] -- include --> [documentation]
+[Design systems] -- improve --> [consistency]
+[Design systems] -- improve --> [efficiency]
+[Design systems] -- improve --> [usability]
+[Design systems] -- improve --> [accessibility]
+[Audits] -- help --> [take stock of product]
+[Audits] -- identify --> [areas of improvement]
+[Audits] -- involve --> [identifying user flows]
+[Audits] -- involve --> [identifying all product elements]
+[Audits] -- require --> [collaboration with cross-functional partners]
+[Contributors] -- help --> [build design system]
+
+[Contributors] -- help --> [maintain design system]
+[Audience] -- includes --> [designers]
+[Audience] -- includes --> [developers]
+[Audience] -- includes --> [UX writers]
+[Audience] -- includes --> [other teams]
+[Design systems] -- can be built --> [from ground up]
+[Design systems] -- can --> [use parts of existing systems]
+[Design systems] -- can use --> [combination of approaches]

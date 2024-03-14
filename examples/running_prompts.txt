@@ -288,3 +288,211 @@ print(f"Response without RAG:\n{response}")
 print(f"Context:\n{context}")
 print(f"RAG-Response:\n{rag_response}")
 ```
+
+
+## good prompts
+---
+<role>You are an engineering wizard, experienced at solving complex problems across various disciplines. Your knowledge is both wide and deep. You are also a great communicator, giving very thoughtful and clear advice.</role>
+
+You provide advice in the following <response_format>:
+
+<response_format>
+
+<problem_overview>Overview of the problem</problem_overview>
+
+<challenges>Key challenges in solving the problem</challenges> 
+
+<solution1>First potential solution</solution1>
+
+<solution2>Second potential solution</solution2>
+
+<solution3>Third potential solution</solution3>
+
+<solution1_analysis>Analysis of pros and cons of Solution 1</solution1_analysis>
+
+<solution2_analysis>Analysis of pros and cons of Solution 2</solution2_analysis>  
+
+<solution3_analysis>Analysis of pros and cons of Solution 3</solution3_analysis>
+
+<additional_solution>An additional solution, potentially combining ideas from the other solutions or introducing new ideas</additional_solution>
+
+<recommendation>Your final recommendation on the best approach</recommendation>
+
+</response_format>
+
+<response_quality>
+
+Each section (problem_overview, challenges, solution1, solution2, solution3, solution1_analysis, solution2_analysis, solution3_analysis, additional_solution, and recommendation) should contain a minimum of four thoughtful, detailed sentences analyzing the problem and solutions in-depth. Approach this with great care — be incredibly thoughtful and accurate. Leave no stone unturned.
+
+</response_quality>
+
+Here is the problem I want you to solve: <problem_to_solve>{PROBLEM_HERE}</problem_to_solve>
+---
+
+
+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
+
+Variables: {'$DOCUMENTS'} ************************ Prompt: Your task is to analyze a set of documents to extract key concepts and relationships between those concepts, and then use the extracted information to create a Knowledge Graph. Here are the documents to analyze: <documents> {$DOCUMENTS} </documents> Please carefully read through the provided documents. As you read, identify and extract the most important concepts discussed in the documents. Once you have finished reading, please list out the key concepts you identified, with each concept on its own line. Next, look for relationships between the concepts you extracted. Identify as many clear relationships as you can based on the information provided in the documents. Using the extracted concepts and relationships, construct a Knowledge Graph. Represent the Knowledge Graph in the following format: <KnowledgeGraph> Concept1 - relationship - Concept2 Concept2 - relationship - Concept3 ... </KnowledgeGraph> For example: <KnowledgeGraph> Dog - is a type of - Animal Cat - is a type of - Animal Dog - chases - Cat </KnowledgeGraph> If possible, also provide a graphical representation of the Knowledge Graph using ASCII art or a simple markup format. Please only use information that is explicitly stated or very strongly implied in the provided documents. Do not incorporate any outside knowledge. Provide your full analysis and the resulting Knowledge Graph inside <result> tags.
+
+
+************************
+
+Prompt:
+You will now be given a document about the Figma design tool. Your goal is to build a Knowledge Graph using the concepts and relationships in the document.
+
+Please carefully read through the provided documents. As you read, identify and extract the most
+important concepts discussed in the documents. Once you have finished reading, please list out the
+key concepts you identified, with each concept on its own line.
+
+Next, look for relationships between the concepts you extracted. Identify as many clear
+relationships as you can based on the information provided in the documents.
+
+Please only use information that is explicitly stated or very strongly implied in the provided
+documents. Do not incorporate any outside knowledge.
+
+Provide your full analysis and the resulting Knowledge Graph inside <result> tags.
+
+************************
+************************
+
+Thank you, now we are going to refactor a bit. Right now, we rely on the `llm_manager` to use both the `EmbeddingStorage` and `EmbeddingModel` class. 
+    
+Let's make a new `EmbeddingManager` class that uses both of these classes instead, so we can ideally use the class standalone, outside of the LLMManager. 
+
+`EmbeddingStorage`:
+```python
+def generate_id(text: str) -> str:
+    """Generate a unique ID for a given text."""
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()
+
+class EmbeddingStorage:
+    """Manages storage and retrieval of text embeddings."""
+
+    def __init__(self, file_path: str, file_format: str = "npz"):
+        self.file_path, self.file_format = file_path, file_format
+        self.embeddings = {}  # Maps IDs to embeddings
+        self.metadata = {}    # Maps IDs to metadata
+        self._load_from_file()
+
+    def add(self, embeddings: List[np.ndarray], metadatas: Optional[List[Dict]] = None) -> List[str]:
+        """Add new embeddings with optional metadata and texts."""
+        ids = []
+        for i, embedding in enumerate(embeddings):
+            id = generate_id(metadatas[i]['text'] if metadatas else str(embedding.tolist()))
+            self.embeddings[id] = embedding
+            if metadatas:
+                self.metadata[id] = metadatas[i]
+            ids.append(id)
+        return ids
+
+    def get(self, ids: List[str]) -> Dict[str, np.ndarray]:
+        """Retrieve embeddings by IDs."""
+        return {id: self.embeddings.get(id) for id in ids if id in self.embeddings}
+
+    def update(self, id: str, embedding: Optional[np.ndarray] = None, metadata: Optional[Dict] = None, text: Optional[str] = None):
+        """Update existing embedding, metadata, and text by ID."""
+        if id in self.embeddings or id in self.metadata or id in self.text_mapping:
+            if embedding is not None:
+                self.embeddings[id] = embedding
+            if metadata is not None:
+                self.metadata[id].update(metadata)
+        else:
+            logger.warning(f"ID '{id}' not found in storage.")
+
+    def delete(self, ids: List[str]):
+        """Remove embeddings, metadata, and texts by IDs."""
+        for id in ids:
+            self.embeddings.pop(id, None)
+            self.metadata.pop(id, None)
+
+    def find_top_n(self, query_embedding: np.ndarray, n: int = 5, largest_first=False) -> List[Tuple[str, float, str]]:
+        """Find top-n embeddings most similar to query."""
+        distances = [(id, cosine(query_embedding, emb), self.text_mapping.get(id, "")) for id, emb in self.embeddings.items()]
+        return sorted(distances, key=lambda x: x[1], reverse=largest_first)[:n]
+
+    def _load_from_file(self):
+        """Load stored embeddings, metadata, and text mappings."""
+        try:
+            if os.path.exists(self.file_path):
+                self.embeddings = np.load(self.file_path + '.npz', allow_pickle=True)
+                self.metadata = np.load(self.file_path + '_metadata.npz', allow_pickle=True)
+        except Exception as e:
+            logger.error(f"Failed to load embedding storage: {e}")
+
+    def _save_to_file(self):
+        """Save current state to file."""
+        np.savez(self.file_path + f".{self.file_format}", **self.embeddings)
+        np.savez(self.file_path + f'_metadata.{self.file_format}', **self.metadata)
+```
+
+`EmbeddingModel`:  
+```python
+class EmbeddingModel:
+    """Handles extraction of text embeddings using various libraries."""
+    
+    def __init__(self, model_name: str = "all-MiniLM-L6-v2", model_library: str = "sentence-transformers", **kwargs):
+        """
+        Initializes the embedding model based on the specified library and model name.
+        
+        Args:
+            model_name (str): Identifier for the model.
+            model_library (str): The library from which to load the model ('sentence-transformers', 'transformers', or 'llama').
+        """
+        self.model_name = model_name
+        self.model_library = model_library
+        self.model, self.tokenizer = self._load_model()
+
+    def _load_model(self) -> Tuple[Optional[object], Optional[object]]:
+        """Loads the model and tokenizer based on the model library."""
+        if self.model_library == "sentence-transformers":
+            return SentenceTransformer(self.model_name), None
+        elif self.model_library == "transformers":
+            return AutoModel.from_pretrained(self.model_name), AutoTokenizer.from_pretrained(self.model_name)
+        elif self.model_library == "llama":
+            return Llama(model_path=self.model_name, embedding=True), None
+        else:
+            raise ValueError(f"Unsupported model library: {self.model_library}")
+
+    def embed(self, texts: List[str]) -> List[List[float]]:
+        """Generates embeddings for a list of texts."""
+        if self.model_library == "sentence-transformers":
+            return self.model.encode(texts, convert_to_tensor=False).tolist()
+        elif self.model_library == "transformers":
+            encoded_input = self.tokenizer(texts, padding=True, truncation=True, return_tensors='pt')
+            with torch.no_grad():
+                model_output = self.model(**encoded_input)
+            # TODO: support different poolings
+            return _mean_pooling(model_output, encoded_input['attention_mask']).tolist()
+        elif self.model_library == "llama":
+            return [self.model.embed(text) for text in texts]
+        else:
+            raise ValueError(f"Unsupported model library for embedding: {self.model_library}")
+```
+
+Here is the functionality we want to manage under the new `EmbeddingManager`:
+
+`TO_REFACTOR`:
+```python
+class FigmaLLM: # <-- to be refactored
+    def __init__(
+            self,
+            embedding_model_info: Optional[Dict[str, Any]] = Config.DEFAULT_EMBEDDINGS,
+            **kwargs,
+        ):
+        # Initialize the embedding components
+        self.init_embeddings(embedding_model_info)
+
+    @exception_handler
+    def embed_and_store(self, text: str, **kwargs):
+        """Chunk text, extract, and store embeddings."""
+        if not hasattr(self, 'embedding_model'):
+            raise ValueError("Embedding model is not initialized.")
+        chunks = chunk_text(text)
+        embeddings = [self.embedding_model.embed(chunk) for chunk in chunks]
+        metadatas = [{"chunk_index": i, "text": chunk} for i, chunk in enumerate(chunks)]
+        self.embedding_storage.add(embeddings=embeddings, metadatas=metadatas)
+```
+
+Please refactor instead to an EmbeddingEngine, that still separates the duties (aka creates its own member variables for EmbeddingModel and EmbeddingStorage, and uses these directly). We still want the storage and extraction to be isolated to their own files. For example, we have one class now that is both loading from file and loading the model. That's a bit messy for a single __init__(*args, **kwargs), 
+
+The EmbeddingEngine is what LLMFigma should use internally, instead of the two separate classes.  

@@ -1,0 +1,52 @@
+<result>
+Key Concepts:
+
+Documentation: Guides system usage
+Naming conventions: Consistent terminology
+Descriptions: Explain components
+Context: Additional info for users
+Accessibility: Ease of finding docs
+Testing: Validates system
+User interviews: Gather feedback
+Tasks: Evaluate system usage
+Feedback channels: Ongoing input
+Contribution process: Enables improvements
+Internal process: For system maintainers
+External process: For system users
+Changelogs: Track updates
+Version numbers: Identify iterations
+Semantic versioning: Major.Minor.Patch
+Branching: Isolated development
+Merging: Integrate changes
+Advocacy: Promote system adoption
+
+Relationships:
+[Documentation] --(guides)--> [system usage]
+[Naming conventions] --(ensure)--> [consistent terminology]
+[Descriptions] --(explain)--> [components]
+[Context] --(provides)--> [additional info for users]
+[Accessibility] --(impacts)--> [ease of finding docs]
+[Testing] --(validates)--> [design system]
+[User interviews] --(gather)--> [feedback]
+[Tasks] --(evaluate)--> [system usage]
+[Feedback channels] --(enable)--> [ongoing input]
+[Contribution process] --(enables)--> [system improvements]
+[Internal process] --(intended for)--> [system maintainers]
+[External process] --(intended for)--> [system users]
+[Changelogs] --(track)--> [system updates]
+[Version numbers] --(identify)--> [system iterations]
+[Semantic versioning] --(follows)--> [Major.Minor.Patch pattern]
+[Branching] --(allows)--> [isolated development]
+[Merging] --(integrates)--> [changes into main system]
+[Advocacy] --(promotes)--> [system adoption]
+[Documentation] --(includes)--> [naming conventions]
+[Documentation] --(includes)--> [descriptions]
+[Documentation] --(includes)--> [context]
+[Testing] --(includes)--> [user interviews]
+[Testing] --(includes)--> [tasks]
+[Contribution process] --(includes)--> [internal process]
+[Contribution process] --(includes)--> [external process]
+[Changelogs] --(use)--> [version numbers]
+[Branching] --(precedes)--> [merging]
+
+</result>

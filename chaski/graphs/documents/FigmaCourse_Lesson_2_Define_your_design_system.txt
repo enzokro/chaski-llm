@@ -1,0 +1,172 @@
+This is a written version of our Introduction to design systems: Lesson 2 video tutorial. Watch the video and follow along with the written course below.
+Welcome back! In this lesson, we’ll dig into four key parts of a successful design system.
+These are some of the most important aspects of building a design system. Each of these topics are deep, and we won't be able to cover everything in our time together. Instead, we'll focus on what you need to get started.
+After learning these basics, consider the needs of your team, business, and system to determine where you may need further learning. And if you’d like for us to do a deeper dive on any of these topics, let us know. Now, let’s get started!
+
+Principles are the why of a design system. They’re the guiding standards and approaches that reflect the company's beliefs and values.
+A strong set of principles directs everyone towards a common goal and helps people get aligned when conflicts arise.
+To create impactful principles, you need to include perspectives from across the business.
+Get together with partners from across the company and share some ideas. See if you can spot recurring patterns, characteristics, and actions among them. Then establish some principles that are easy to understand and to put in to practice.
+For example, the Habitz team—who are designing an app to help people form healthy habits—brainstormed principles with people across the company.
+They identified a common theme, which became the principle “Be accessible and inclusive”. They included notes to describe the principle in more detail, like “The service should be available to the widest possible audience" to clarify what inclusive means; and “celebrate prioritizing accessibility” to build a strong culture around this principle.
+They also documented clear considerations for teams as they build, like:
+Lastly, they included actionable suggestions like:
+Set up a FigJam file to brainstorm with your team. Work together to gather ideas, ensuring that everyone has a chance to provide input.
+Try to identify common themes among the ideas you captured, and define three or more principles that your design system should include.
+Remember that your principles should be clear, opinionated values your team believes in! Have fun with it.
+
+Foundations are the what of your design system. They are the building blocks you'll use to create product experiences, like visual styles, colors, typography, and components, as well as patterns, like structures, behaviors, and conventions.
+
+There's a lot you can include here and it will vary from system to system. We'll cover just a few key aspects to consider.
+One important practice to include in your foundations is accessibility. Accessibility—which you might see in its abbreviated a11y form —is a type of inclusive design focusing on people with disabilities.
+Disabilities take many forms and can impact the way we see, hear, speak, touch, and understand the world around us. They can be permanent (like blindness), temporary (like a broken arm or lost voice), or situational (like low visibility while driving).
+
+Disability is part of being human. Most people will experience disability at some point in their lives, either temporarily or permanently.
+As designers, our decisions impact the way people experience the world. If people can’t access or use what we've built, we're denying them these experiences. It can make people feel unimportant, forgotten, or unwelcome.
+You’ll see accessibility as a foundation in many design systems. It's an effective way to empower teams to create more accessible experiences, at scale.
+Accessibility is a vast but important journey to take. If you want to learn more, check out the resources linked below:
+Color can express personality, invoke emotions, and influence behavior. It can mean different things to different cultures.
+In products, color can create hierarchy and provide affordances.
+An effective color palette should offer a selection of colors. Having too many can create chaos, but having too few can limit the flexibility in your designs.
+This can get especially tricky when considering how colors adapt to different themes. For example, if you’re creating a dark mode for your product, this involves more than swapping light and dark colors. You may need shade variations for colors. 
+Or, if your company has multiple products, you want them to look and feel distinct, but adding too many colors to achieve this leads to inconsistency in how they’re used, brand confusion, and a palette that’s difficult to work with.
+To create a balanced color palette, it’s important to assess colors against the functions your system needs. Those functions can become a semantic color system, where single color values provide semantic meaning for functions like messaging, status, priority, actions, and more.
+
+Go audit your team’s designs. Is your team using many similar colors that could be simplified into one* value?
+Are there functions being represented by more than one color? Maybe there are five different colors being used for primary buttons in your product. Try narrowing those down to fewer colors.
+Keeping your color palette simplified also makes it easier for consumers of your system to use color appropriately.
+It’ll help designers avoid clutter, and create balanced designs. Like this one that follows the 60/30/10 rule where approximately 60% of the screen is a neutral color, 30% a primary color, and 10% a secondary, or call to action—if you have one.
+
+A color system is ever evolving. Start small, and grow it over time with your team’s needs.
+There are also a number of accessibility considerations for color. Color contrast—the contrast between foreground and background colors—impacts our ability to see an element clearly.
+There are many tools available for measuring contrast and accessibility. In Figma, you can find plugins in the Community to make sure your designs meet Web Content Accessibility Guidelines.
+There are three acceptance levels A, AA (double A), and AAA (triple A). The more A’s, the higher the standard. These guidelines are the minimum, so aim for AA or higher.
+It’s not just contrast that’s important for accessibility. Not everybody sees and distinguishes colors to the same extent. So we can’t rely on color alone to communicate status or give meaning to elements.
+Consider adding a symbol, icon, or helper text —in addition to color— to better distinguish elements. For more guidance on color, check out the Design tokens on Asana's Design Systems Team talk from Schema 2021.
+
+This system isn’t perfect, and sometimes you’ll get results you might not expect. There’s no substitute for testing your designs and getting feedback from actual people. Make sure to include people with different accessibility needs, especially those with assistive technologies.
+A strong typography system creates consistency, personality, and readability across your product.
+There are many things to learn about type, but we can only scratch the surface in this lesson. If you'd like us to dive deep on type in the future, leave a comment and let us know!
+Choosing a typeface—or a font from that typeface—can be a challenge. The right or wrong choice can have a huge impact on our designs. You might need to work with other teams—like brand and marketing—to find alignment.
+It's likely you'll end up with a few fonts in your typography system. Your brand team might want a large Display font for brand recognition, or a hand-written font to bring add playful personality. But you may also need a modern, sans-serif font that's easier to read.
+Aim for a balance between personality, performance, and on-screen legibility. Choosing a font could be an hours-long lesson of its own. But we've included some resources if you want to go deeper: 
+A type scale is a collection of font sizes and styles, that makes up your type system. It starts with a base text size, often 16 pixels, and a pre-determined scale factor.
+
+You multiply by your chosen scale factor to create larger text sizes, or divide for smaller text sizes. The goal is to create a harmonious collection of font sizes you can use across your product. Using a popular scale factor is a great place to start. Like the major third or the perfect fourth.
+If you’re using a grid system, like an 8pt baseline grid, try rounding your type sizes to the nearest whole number that is a multiple of 8. You’ll want to do the same for line height, too. Not sure about grids? We’ll cover those soon.
+Try out a few multipliers using plugins like Typescale by Sam Smith, or Scaaale (with three A’s) by Nicolas Massi. See which scale works best for you!
+It's common to see a type scale presented in a hierarchical format. This type scale includes fonts for headings, subtitles, body text, and elements. They each have properties for font, weight, size, and letter spacing.
+
+If you used this scale for a blog, or a documentation site, you could make some assumptions about which fonts to use. Like a headline font for your headings and a body font for your paragraph text.
+But if you were designing an app, with custom elements and layouts, you may struggle to choose the right size. In this situation, it might make more sense to approach your type scale with its intended "application" in mind.
+You can see this approach reflected in this type system. Instead of a list of six heading and two subtitle fonts, we have display fonts, heading fonts, and title fonts. Each with a small, medium, and large variation. With this structure, we can first choose a font by its function, or role, then its size.
+
+There’s no limit to how many sizes you can include in your type scale. But if you have too many font sizes, it can be tempting to use them in the wrong way, or be inconsistent in how you apply them. Sticking to a few sizes will make it easier to create consistent and harmonious designs.
+As we saw in this type system, size isn't the only property to consider. Think about some other ways you can create distinction with type.
+Work with your team to find all the text in the main user flows of your product. You can even reference your audit findings from the previous lesson.How many font sizes and styles are you using? Are they consistent between different pages in your designs? What different functions does text perform? Is it used to sign-post, convey information in bulk, or alert users to something important?
+In design systems, elevation provides hierarchy, separation, and give visual feedback. This can be achieved through various styling techniques, like using colors, shadows, transparency, and overlays.
+Elevation can also be used to support animations and interactions, like how a button’s style changes when you hover over it, indicating that it’s active and ready to be clicked.
+
+Be mindful of where and when you apply elevation—or if you use it at all.
+If you’re designing a mobile app, it might not be the best choice to add hover states to objects since there isn’t a way for users to hover on touchscreen devices. Find an alternative to communicate an interactive object.
+When adding shadows, avoid using true black as it can make designs look muddy and dull. Instead, use a darker value of a color from your color system to make it compliment the rest of your design.
+An icon system is a collection of icons used throughout a product or brand. A well-designed icon system helps reinforce a company's visual identity. It can also improve usability and create a consistent user experience.
+Icon systems can be in a variety of different styles. Some styles you might know are line, flat, 3d, and illustrative.
+
+Icons should be functional and recognizable. They help users understand and interact with digital products. Abstracting an icon can make it stand out, but go too far and you risk losing its meaning. An icon isn't very effective if people don't understand what it means.
+That's why many icons look similar—or familiar. It also means you don't need to reinvent the wheel!
+Wondering if an icon is easy to understand? Try testing it with your customers, alongside some alternatives. User research can also help with naming and documenting icons.
+If we use a well-understood naming structure, we can make sure icons are easy to find and use. We can even include related search terms to help guide people to the right icons.
+Consider what different people might call an icon, or what they’d search for. What keyword would you search to find this icon? One person might search “eye”. While others may search “visible”, or “show”.
+
+Include these terms in your icon’s description to make it easier for people to use your system. A complete guide to iconography on designsystems.com 
+Think of search terms someone might use for each of these icons. Think beyond what the icon literally is. Instead, what ideas or concepts are surrounding it? What problem might a design system consumer be solving for them to need this icon?
+
+When building out your system, make sure your icons are consistent in size. This applies to the icon itself, its container, and any padding.
+This makes it easier to:
+You may also need a variety of sizes for icons. At Figma, the icons for these tools appear both in the toolbar at 40px and in the layers panel at 16px. Consider where icons will live to decide which sizes are necessary.
+An icon grid is another helpful tool for creating consistency across icons. It provides a blueprint for the icon’s dimensions, alignment, and padding. 
+Grids, layouts, and spacing are the unseen scaffolding that provide structure and rhythm to our designs.
+The human eye is always on the lookout for patterns, and discrepancies. Having incorrect or inconsistent architecture can impact the customer's experience of our product.
+By creating rules for these properties‚ we can establish a spatial system. This makes designs more consistent, eases decision making in teams, and reduces errors.
+We often need to design experiences that work across a range of devices and screen sizes. To create the best experience, our designs need to respond to a device’s dimensions in a way people expect.
+
+Breakpoints are specific screen sizes where the layout of a page changes. For example, you might have:
+
+Many systems have even more. We can help designers account for these breakpoints by providing layouts. Layouts are a collection of pre-defined templates for various screen sizes. They function like building blocks that make up a screen or page.
+Each region in a template acts as a container for elements with related or similar functions. Like this layout which includes a top app bar, a sidebar, and main body sections.
+
+With breakpoints, you need to define fixed pixel values for when they apply. A device can also change its size. Like when you shrink your browser window. Or when you rotate your phone.
+With so many devices on the market, it can be difficult to define breakpoints that work for every device. It can also be hard to maintain as new devices become available.
+To address this, you can approach layouts in a way that's responsive or fluid. This allows you to account for all the spaces in-between.
+Responsive, fluid layouts let content grow, shrink, and reflow as they respond to changes in the screen, or viewport size.
+Grid systems ensure elements have consistent size, alignment, and spacing. The most common grid formats include column, baseline, and modular grids.
+Let’s start with columns. You can divide layouts into vertical columns. Then place each element of your design in one or more of these columns. This makes it easier to align elements and create a consistent look and feel for your design.
+
+You'll often have a different number of columns for different device sizes. A mobile device may use 4 columns, while a larger desktop screen can use up to 12.
+
+The space around the edge is called the margin, and any space between columns is the gutter.
+
+Columns in a fixed grid system won't change their width based on the size of the viewport. While flexible or stretch grids will grow and shrink with the viewport.
+A baseline grid consists of horizontal lines, or rows at even intervals. They create consistency and rhythm and make sure your vertical spacing is consistent. The 8pt baseline grid is one popular choice.
+With an 8pt grid, you position elements relative to the baseline. The vertical spacing between elements is always divisible by 8. Like 8, 16, 24, 32, and so on.
+
+A baseline grid should also play a role in defining your type system. Text in your design should have font sizes and line height that are divisible by 8, or the size of your baseline grid. This improves rhythm and consistent alignment when reading, no matter the length of the text.
+
+You can even extend an 8pt grid to be a modular grid with both columns and rows. Perhaps this is what you imagined when we said the word “grid”?
+
+But why is 8 the magic number? Remember those breakpoints we mentioned earlier? They’re all divisible by 8. Huh. That’s weird. Or is it?
+There are even more grid types we haven’t included, but these are a great place to start. And remember, these grids are guidelines. You can always go outside the lines, as long as it serves a purpose. Like being fun!
+It’s hard to talk about grids without talking about spacing. Spacing helps establish hierarchy and relationships between objects.
+When we talk about spacing, we’re referring to a group of properties that contribute to the “negative space” in and around an element. This includes padding, margins, and any extra space between elements.
+
+Most spacing systems work off of a base size that includes additional spacer options using the base as a multiplier. Remember the 8pt grid from earlier? What do you think is the base spacer in that system? You guessed it! It’s 8. And additional options may be a multiple of 8 again, like 16, or 32.
+Spacers are usually captured in documentation for your system, and don’t exist as physical objects or components you place in your layouts. You can also document exceptions, like when 4px spacers might be appropriate.
+Conflicting or competing values create ambiguity. They make it hard for designers to make decisions, and can obstruct the harmony of your designs.
+It’ll be difficult to make an 8pt base unit for a spacing system work with a base font style of 15 with a line height of 20.That's why it's important to consider the other scales you're using in your design system.
+In these lessons we're talking about foundations as separate pieces. When in reality, they're all connected. That's the nature of systems. The relationship between the elements is just as important as the elements themselves. Spacing, grids, and layouts on designsystems.com →
+Patterns are reusable solutions to common problems or user goals in your product.
+For example: Creating new habits and connecting health devices are common goals for Habitz users. Having patterns for these common actions documented in our system can help designers create similar flows or extensions of these ones more consistently.
+To identify patterns already in your product, conduct a system-wide audit, and document your findings. What user flows and goals happen most frequently?
+To start establishing patterns, first identify the most common user goals in your product and their current solutions. Then, find the high-quality ones. Not sure if an idea is quality or not? Refer to analytics and data logs in your product.
+Ask yourself questions like: how many people successfully complete the user flow you documented in your audit? Or where are they failing to progress?
+Don’t have data? Try conducting user research with your customers to get feedback instead. Then document the winning patterns thoroughly.
+
+The third aspect of your design system is documentation, or the how. It communicates the purpose of all these aspects of your design system and how best to apply them. Your documentation should also grow and evolve over time, like your design system.
+Documentation can look like:
+How you choose to document your system is up to you. Think about your audience, when they'll need it, and how they'll access it.
+Bear in mind that changing people's behavior and habits is a tricky business. If it's too difficult for people to find and access, they won’t use it.
+We recommend documenting your decisions as you go. This captures important information as you define it, and saves you time.
+Adding new components, patterns, or layouts to your system? Make documentation a rule or criteria for marking it “done”.
+Writing clear documentation is a skill. Try these tips to improve your docs:
+A naming system makes it easier to find, understand, and apply elements in your design system.
+Take color for example. Instead of evocative names that describe a color or hex codes that abstract it. Consider the function of the color, and how you'll use it.
+Semantic naming — names that convey meaning— make application easier. Naming a color “danger” or this one “primary” is more helpful than "red" or "XXXXXX". It can also reduce incorrect usage of a color.
+Take this set of buttons. The primary buttons are the main action of a page. There should only be one of them. Secondary buttons are non-critical actions. Each set has a default state and a pressed state. We can identify three levels to these buttons.
+
+From this, we have established a structure for naming assets:  Category / Use
+  / Variation.
+
+For this structure to work, we need a consistent way to put it in place. Common options include:
+
+Not sure where to start? Try talking to your development team! Some languages may not allow spaces in variable and component names. So it’s common to use camelCase and underscore_case in programming. They may already have a structure you can adopt that makes handoff easier.
+Let’s explore how that could work with an example. A component is a collection of properties that form a single element or experience.
+When someone uses the component, they make choices about what properties they change or remove. Both designers and developers play a role in establishing those properties.
+By aligning on property names, applications, and limitations, you keep design files in sync with your code base. Reducing the time it takes to turn designs into code.
+
+When you’re just starting out, documentation can be a scary skill to master. Take your time—you’ll always have time to evolve and update as both you and your system grow.
+
+The final foundation of your design system we have left to cover are the processes. Processes are just as important as the tools and assets within the system. They capture the mechanics and governance for managing a design system:
+It’s important to establish these with your contributors before a design system goes live.
+Remember that your design system is going to grow and evolve over time. These processes will help manage growth, as more people use and contribute to the system. Without strong processes in place, the whole system could start to break down.
+When designers and developers work side-by-side, your design system benefits. This key relationship influences the success of your design system. And the product development process.
+You tackle feasibility issues earlier in the process, need shorter iteration cycles, and fewer design-development reviews.
+So, what can we do to make this collaboration more successful?
+Each team is going to work in different ways. Your developers might use different technologies than developers at another company.
+If you don’t have processes documented yet, start brainstorming with your team. How do you work together successfully? Try making a flow-chart diagram of how your processes work and get everyone’s input on it.
+Did you recently work on a project with developers? Try holding a collaborative project team retrospective to learn what worked well, and what didn’t. Some of these could become documented do’s and don’t’s to build a strong culture of collaborating with you developers early and often.
+Maybe invite your developers to host a lunch and learn with your design team to show them around the code base.
+Congrats on making it to the end of this section of the design systems course! Remember, that for everything we touched on, we only just began to scratch the surface.
+The things you learned will help you start asking the right questions, but if you find that you’re stuck, or if you need more guidance, consider seeking out further learning.
+You can also consider joining online communities and forums to ask new and experienced design systems managers questions you might have, so we can all learn together.
+In the next lesson we’ll learn about the art of building a design system in Figma.See you there!

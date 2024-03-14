@@ -10,3 +10,5 @@ nbdev
 sentence-transformers
 transformers
 torch
+sentence
+protofbuf

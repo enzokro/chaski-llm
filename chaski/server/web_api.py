@@ -3,8 +3,8 @@ from typing import Optional, Union
 from flask import Flask, request, render_template, jsonify, Response
 import fire
 
-from figma_llm.models.llm_manager import LLMManager
-from figma_llm.utils.config import Config
+from chaski.models.llm import LLM
+from chaski.utils.config import Config
 
 # Setup logger for server activities
 logging.basicConfig(level=logging.INFO)
@@ -19,9 +19,9 @@ history = []
 def initialize_llm_manager(model_path: str, use_embeddings: bool, chat_format: Optional[str]):
     """Initialize LLM Manager with configured settings."""
     model_path = model_path or Config.MODEL_PATH
-    return LLMManager(model_path=model_path, use_embeddings=use_embeddings, chat_format=chat_format)
+    return LLM(model_path=model_path, use_embeddings=use_embeddings, chat_format=chat_format)
 
-def server_app(host: str, port: int, model_path: str = "", use_embeddings: bool = False, chat_format: Optional[str] = None):
+def run_app(host: str, port: int, model_path: str = "", use_embeddings: bool = False, chat_format: Optional[str] = None):
     """Configure and start the server."""
     llm_manager = initialize_llm_manager(model_path, use_embeddings, chat_format)
 
@@ -55,7 +55,7 @@ def server_app(host: str, port: int, model_path: str = "", use_embeddings: bool 
 
 if __name__ == "__main__":
     try:
-        fire.Fire(server_app)
+        fire.Fire(run_app)
     except KeyboardInterrupt:
         logger.info("Server shutdown initiated.")
     except Exception as e:

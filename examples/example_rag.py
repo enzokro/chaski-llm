@@ -1,6 +1,6 @@
-from figma_llm.models.llm_manager import LLMManager
-from figma_llm.embeds.db import EmbeddingStorage
-from figma_llm.utils.config import Config
+from chaski.models.llm import LLMManager
+from chaski.embeds.engine import EmbeddingsEngine
+from chaski.utils.config import Config
 
 # regular mistral instruct format
 def prompt_mistral(query, *args, **kwargs):
@@ -21,8 +21,6 @@ llm_manager = LLMManager(
     embedding_model_info=Config.DEFAULT_EMBEDDINGS  # Use default embedding model settings
 )
 
-# Initialize an empty EmbeddingStorage
-llm_manager.embedding_storage = EmbeddingStorage(Config.DEFAULT_EMBEDDINGS['file_path'])
 
 # Embed and store a series of sample documents
 sample_documents = [

@@ -1,5 +1,5 @@
 import argparse
-from figma_llm.utils.config import Config
+from chaski.utils.config import Config
 
 def parse_args():
     parser = argparse.ArgumentParser(description="LLM App")

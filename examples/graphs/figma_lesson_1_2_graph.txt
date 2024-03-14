@@ -1,0 +1,82 @@
+<result>
+Key Concepts:
+
+Design systems
+Principles
+Foundations
+Accessibility
+Color systems
+Typography
+Type scale
+Elevation
+Icon systems
+Grids
+Layouts
+Spacing
+Patterns
+Documentation
+Naming systems
+Processes
+Designer-developer collaboration
+Relationships:
+
+Principles are the guiding standards and approaches of a design system
+Principles reflect the company's beliefs and values
+Foundations are the building blocks of a design system
+Foundations include visual styles, colors, typography, components, patterns, structures, behaviors, and conventions
+Accessibility is an important practice to include in design system foundations
+Color systems provide semantic meaning for functions like messaging, status, priority, and actions
+Typography systems create consistency, personality, and readability across a product
+Type scales are collections of font sizes and styles that make up a type system
+Elevation provides hierarchy, separation, and visual feedback in design systems
+Icon systems are collections of icons used throughout a product or brand
+Grids, layouts, and spacing provide structure and rhythm to designs
+Patterns are reusable solutions to common problems or user goals in a product
+Documentation communicates the purpose and application of design system elements
+Naming systems make it easier to find, understand, and apply elements in a design system
+Processes capture the mechanics and governance for managing a design system
+Designer-developer collaboration influences the success of a design system and product development process
+Knowledge Graph:
+
+[Design systems] -- include --> [Principles]
+[Principles] -- are --> [guiding standards and approaches]
+[Principles] -- reflect --> [company's beliefs and values]
+[Design systems] -- include --> [Foundations]
+[Foundations] -- are --> [building blocks]
+[Foundations] -- include --> [visual styles]
+[Foundations] -- include --> [colors]
+[Foundations] -- include --> [typography]
+[Foundations] -- include --> [components]
+[Foundations] -- include --> [patterns]
+[Foundations] -- include --> [structures]
+[Foundations] -- include --> [behaviors]
+[Foundations] -- include --> [conventions]
+[Accessibility] -- is an important practice in --> [Foundations]
+[Color systems] -- provide --> [semantic meaning for functions]
+[Typography systems] -- create --> [consistency]
+[Typography systems] -- create --> [personality]
+[Typography systems] -- create --> [readability]
+[Type scales] -- are collections of --> [font sizes and styles]
+[Type scales] -- make up --> [Typography systems]
+[Elevation] -- provides --> [hierarchy]
+[Elevation] -- provides --> [separation]
+[Elevation] -- provides --> [visual feedback]
+[Icon systems] -- are collections of --> [icons]
+[Icon systems] -- are used throughout --> [product or brand]
+[Grids] -- provide --> [structure and rhythm to designs]
+[Layouts] -- provide --> [structure and rhythm to designs]
+[Spacing] -- provides --> [structure and rhythm to designs]
+[Patterns] -- are --> [reusable solutions]
+[Patterns] -- solve --> [common problems or user goals]
+[Documentation] -- communicates --> [purpose of design system elements]
+[Documentation] -- communicates --> [application of design system elements]
+
+[Naming systems] -- make it easier to --> [find design system elements]
+[Naming systems] -- make it easier to --> [understand design system elements]
+[Naming systems] -- make it easier to --> [apply design system elements]
+[Processes] -- capture --> [mechanics for managing design system]
+[Processes] -- capture --> [governance for managing design system]
+[Designer-developer collaboration] -- influences --> [success of design system]
+[Designer-developer collaboration] -- influences --> [product development process]
+
+</result>

@@ -2,10 +2,9 @@ import logging
 from typing import Dict, Any, Generator, List, Optional
 from fastcore.basics import store_attr
 from llama_cpp import Llama
-from figma_llm.utils.config import Config
-from figma_llm.embeds.extract import EmbeddingModel
-from figma_llm.embeds.db import EmbeddingStorage
-from figma_llm.utils.txt_chunk import chunk_text 
+from chaski.utils.config import Config
+from chaski.embeds.engine import EmbeddingsEngine
+from chaski.utils.txt_chunk import chunk_text 
 
 # Initialize logger
 logging.basicConfig(level=logging.INFO)
@@ -21,28 +20,30 @@ def exception_handler(func):
             raise
     return wrapper
 
-class LLMManager:
+class LLM:
     def __init__(
             self,
             model_path: str,
             chat_format: Optional[str] = None,
             use_embeddings: bool = False,
-            embedding_model_info: Optional[Dict[str, Any]] = Config.DEFAULT_EMBEDDINGS,
+            embedding_model_kwargs: Optional[Dict[str, Any]] = Config.DEFAULT_EMBEDDINGS,
             **kwargs,
         ):
-        # Initialize LLM and embedding components
         store_attr()
+
+        # initialize the llm
         self.llm = Llama(model_path=model_path, chat_format=chat_format, **kwargs)
         logger.info(f"Loaded LLM model from {model_path}")
 
-        if use_embeddings:
-            self.init_embeddings(embedding_model_info)
         self.max_tokens = kwargs.get("max_tokens", Config.MAX_TOKENS)
+
+        # initialize the embeddings engine
+        if use_embeddings:
+            self.init_embeddings(embedding_model_kwargs) 
 
     def init_embeddings(self, embedding_model_info: Dict[str, Any]):
         """Initialize embedding model and storage."""
-        self.embedding_model = EmbeddingModel(**embedding_model_info)
-        self.embedding_storage = EmbeddingStorage(file_path=embedding_model_info["file_path"])
+        self.embeds = EmbeddingsEngine(embedding_model_info)
         logger.info("Embedding model and storage initialized.")
 
     @exception_handler
@@ -73,7 +74,4 @@ class LLMManager:
         """Chunk text, extract, and store embeddings."""
         if not hasattr(self, 'embedding_model'):
             raise ValueError("Embedding model is not initialized.")
-        chunks = chunk_text(text)
-        embeddings = [self.embedding_model.embed(chunk) for chunk in chunks]
-        metadatas = [{"chunk_index": i} for i, _ in enumerate(chunks)]
-        self.embedding_storage.add(embeddings=embeddings, metadatas=metadatas, texts=chunks)
+        self.embeds.embed_and_store(text, **kwargs)

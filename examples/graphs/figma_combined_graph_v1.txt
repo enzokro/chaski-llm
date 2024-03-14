@@ -1,0 +1,194 @@
+<result>
+Key Concepts:
+
+Design systems_1
+Figma_2
+Principles_2
+Foundations_2
+Accessibility_2
+Color systems_2
+Typography_2
+Type scale_2
+Elevation_2
+Icon systems_2
+Grids_2
+Layouts_2
+Spacing_2
+Components_2
+Patterns_2
+Documentation_3
+Naming conventions_3
+Libraries_2
+Processes_2
+Designer-developer collaboration_2
+Styles_2
+Atomic design_2
+Auto layout_2
+Color styles_2
+Text styles_2
+Component properties_2
+Variants_2
+Maintenance_2
+Audits_1
+User flows_1
+Style guides_1
+Component libraries_1
+Pattern libraries_1
+Visual language_1
+Building blocks_1
+Templates_1
+Interaction patterns_1
+Redlines_1
+Annotations_1
+Code components_1
+Consistency_1
+Efficiency_1
+Usability_1
+Contributors_1
+Audience_1
+Implementation approaches_1
+Testing_4
+User interviews_4
+Tasks_4
+Feedback channels_4
+Contribution process_4
+Internal process_4
+External process_4
+Changelogs_4
+Version numbers_4
+Semantic versioning_4
+Branching_4
+Merging_4
+Advocacy_4
+Relationships:
+
+Design systems provide tools and resources to build consistent and cohesive products.
+Design systems include style guides, component libraries, and pattern libraries.
+Design systems focus on the entire product ecosystem, not just UI elements.
+Figma is a tool used to build design systems.
+Principles are the guiding standards and approaches of a design system.
+Foundations are the building blocks of a design system.
+Accessibility is an important practice to include in design system foundations.
+Color systems provide semantic meaning for functions.
+Typography systems create consistency, personality, and readability.
+Type scales are collections of font sizes and styles that make up a type system.
+Elevation provides hierarchy, separation, and visual feedback.
+Icon systems are collections of icons used throughout a product or brand.
+Grids, layouts, and spacing provide structure and rhythm to designs.
+Components are the building blocks of designs in a design system.
+Patterns are reusable solutions to common problems or user goals.
+Documentation communicates how to use the design system.
+Naming conventions ensure consistency between design and code.
+Libraries are collections of styles and components shared within a team.
+Processes capture the mechanics and governance for managing a design system.
+Designer-developer collaboration influences the success of a design system.
+Style guides define the appearance and voice/tone of elements.
+Audits help take stock of the product and identify areas of improvement.
+Contributors are people who help build and maintain the design system.
+The audience of a design system includes designers, developers, and other teams.
+Testing validates the design system.
+User interviews gather feedback.
+Tasks evaluate system usage.
+Feedback channels enable ongoing input.
+Contribution process enables system improvements.
+Internal process is intended for system maintainers.
+External process is intended for system users.
+Changelogs track system updates.
+Version numbers identify system iterations.
+Semantic versioning follows the Major.Minor.Patch pattern.
+Branching allows isolated development.
+Merging integrates changes.
+Advocacy promotes system adoption.
+
+Knowledge Graph:
+
+[Design systems_1] -> (provide_1) -> [tools and resources_1]
+[Design systems_1] -> (build_1) -> [consistent and cohesive products_1]
+[Design systems_1] -> (include_1) -> [style guides_1]
+
+[Design systems_1] -> (include_1) -> [component libraries_1]
+[Design systems_1] -> (include_1) -> [pattern libraries_1]
+[Design systems_1] -> (focus on_1) -> [product ecosystem_1]
+[Figma_2] -> (used to build_2) -> [Design systems_1]
+[Design systems_1] -> (include_2) -> [Principles_2]
+[Principles_2] -> (reflect_2) -> [company's beliefs and values_2]
+
+[Design systems_1] -> (include_2) -> [Foundations_2]
+[Foundations_2] -> (include_2) -> [Accessibility_2]
+[Foundations_2] -> (include_2) -> [Color systems_2]
+[Color systems_2] -> (provide_2) -> [semantic meaning for functions_2]
+[Foundations_2] -> (include_2) -> [Typography_2]
+
+[Typography_2] -> (creates_2) -> [consistency_1]
+[Typography_2] -> (creates_2) -> [personality_2]
+[Typography_2] -> (creates_2) -> [readability_2]
+[Typography_2] -> (includes_2) -> [Type scale_2]
+[Foundations_2] -> (include_2) -> [Elevation_2]
+[Elevation_2] -> (provides_2) -> [hierarchy_2]
+[Elevation_2] -> (provides_2) -> [separation_2]
+[Elevation_2] -> (provides_2) -> [visual feedback_2]
+
+[Foundations_2] -> (include_2) -> [Icon systems_2]
+[Foundations_2] -> (include_2) -> [Grids_2]
+[Foundations_2] -> (include_2) -> [Layouts_2]
+[Foundations_2] -> (include_2) -> [Spacing_2]
+[Grids_2] -> (provide_2) -> [structure and rhythm to designs_2]
+[Layouts_2] -> (provide_2) -> [structure and rhythm to designs_2]
+[Spacing_2] -> (provides_2) -> [structure and rhythm to designs_2]
+[Foundations_2] -> (include_2) -> [Components_2]
+[Components_2] -> (are_2) -> [building blocks of designs_2]
+[Foundations_2] -> (include_2) -> [Patterns_2]
+[Patterns_2] -> (are_2) -> [reusable solutions_2]
+[Patterns_2] -> (solve_2) -> [common problems or user goals_2]
+[Design systems_1] -> (include_3) -> [Documentation_3]
+
+[Documentation_3] -> (includes_3) -> [Naming conventions_3]
+[Naming conventions_3] -> (ensure consistency between_3) -> [design and code_2]
+[Figma_2] -> (has feature called_2) -> [Libraries_2]
+[Libraries_2] -> (are collections of_2) -> [Styles_2]
+[Libraries_2] -> (are collections of_2) -> [Components_2]
+[Libraries_2] -> (are shared within_2) -> [team or organization_2]
+[Design systems_1] -> (include_2) -> [Processes_2]
+
+[Processes_2] -> (capture_2) -> [mechanics for managing design system_2]
+[Processes_2] -> (capture_2) -> [governance for managing design system_2]
+[Designer-developer collaboration_2] -> (influences_2) -> [success of design system_1]
+[Designer-developer collaboration_2] -> (influences_2) -> [product development process_2]
+[Style guides_1] -> (define_1) -> [appearance of elements_1]
+[Style guides_1] -> (define_1) -> [voice and tone of elements_1]
+
+[Audits_1] -> (help_1) -> [take stock of product_1]
+[Audits_1] -> (identify_1) -> [areas of improvement_1]
+[Audits_1] -> (involve_1) -> [identifying user flows_1]
+[Audits_1] -> (involve_1) -> [identifying all product elements_1]
+[Audits_1] -> (require_1) -> [collaboration with cross-functional partners_1]
+[Contributors_1] -> (help_1) -> [build design system_1]
+[Contributors_1] -> (help_1) -> [maintain design system_1]
+
+[Audience_1] -> (includes_1) -> [designers_1]
+[Audience_1] -> (includes_1) -> [developers_1]
+[Audience_1] -> (includes_1) -> [UX writers_1]
+[Audience_1] -> (includes_1) -> [other teams_1]
+[Testing_4] -> (validates_4) -> [Design systems_1]
+[Testing_4] -> (includes_4) -> [User interviews_4]
+[User interviews_4] -> (gather_4) -> [feedback_4]
+
+[Testing_4] -> (includes_4) -> [Tasks_4]
+[Tasks_4] -> (evaluate_4) -> [system usage_4]
+[Feedback channels_4] -> (enable_4) -> [ongoing input_4]
+[Contribution process_4] -> (enables_4) -> [system improvements_1]
+[Contribution process_4] -> (includes_4) -> [internal process_4]
+[Internal process_4] -> (intended for_4) -> [system maintainers_4]
+[Contribution process_4] -> (includes_4) -> [external process_4]
+
+[External process_4] -> (intended for_4) -> [system users_4]
+[Changelogs_4] -> (track_4) -> [system updates_4]
+[Changelogs_4] -> (use_4) -> [version numbers_4]
+[Version numbers_4] -> (identify_4) -> [system iterations_4]
+[Semantic versioning_4] -> (follows_4) -> [Major.Minor.Patch pattern_4]
+[Branching_4] -> (allows_4) -> [isolated development_4]
+[Branching_4] -> (precedes_4) -> [merging_4]
+[Merging_4] -> (integrates_4) -> [changes_4]
+[Advocacy_4] -> (promotes_4) -> [system adoption_1]
+
+</result>

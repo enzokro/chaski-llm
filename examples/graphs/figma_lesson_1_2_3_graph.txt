@@ -1,0 +1,80 @@
+<result>
+
+Key Concepts:
+- Design systems
+- Figma
+- Styles
+- Components
+- Libraries
+- Atomic design
+- Naming conventions
+- Layout grids
+- Auto layout
+- Color styles
+- Text styles
+- Elevation
+- Icons
+- Illustrations
+- Component properties
+- Variants
+- Patterns
+- Documentation
+- Maintenance
+
+Relationships:
+- Figma is a tool used to build design systems
+- Styles allow reuse of properties and settings in Figma
+- Components are the building blocks of designs in a design system
+- Libraries are collections of styles and components shared within a team or organization
+- Atomic design is a modular approach to building components
+- Naming conventions ensure consistency between design and code
+- Layout grids help enforce spacing and sizing consistency
+- Auto layout maintains consistent spacing and layout as a frame's content changes
+- Color styles define and organize colors used in a design system
+- Text styles define typography properties like font family, weight, size, line-height, and letter spacing
+- Elevation establishes hierarchy, creates separation, and communicates interaction
+- Icons and illustrations support brand personality and require consistent sizing and naming
+- Component properties allow customization of components
+- Variants represent different states or versions of a component
+- Patterns are fixed combinations of components for specific use cases
+- Documentation communicates how to use the design system
+- Maintenance processes keep the design system updated over time
+
+Knowledge Graph:
+
+[Design systems] -- are built using --> [Figma]
+[Figma] -- has feature called --> [Styles]
+[Styles] -- allow reuse of --> [properties and settings]
+[Figma] -- has feature called --> [Components]
+[Components] -- are --> [building blocks of designs]
+[Figma] -- has feature called --> [Libraries]
+[Libraries] -- are collections of --> [Styles]
+[Libraries] -- are collections of --> [Components]
+[Libraries] -- are shared within --> [team or organization]
+[Atomic design] -- is a modular approach to --> [building components]
+[Naming conventions] -- ensure consistency between --> [design and code]
+[Layout grids] -- help enforce --> [spacing consistency]
+[Layout grids] -- help enforce --> [sizing consistency]
+[Auto layout] -- maintains --> [consistent spacing as frame content changes]
+[Auto layout] -- maintains --> [consistent layout as frame content changes]
+[Color styles] -- define colors used in --> [design system]
+[Color styles] -- organize colors used in --> [design system]
+[Text styles] -- define --> [typography properties]
+[Elevation] -- establishes --> [hierarchy]
+[Elevation] -- creates --> [separation]
+[Elevation] -- communicates --> [interaction]
+[Icons] -- support --> [brand personality]
+[Icons] -- require --> [consistent sizing]
+[Icons] -- require --> [consistent naming]
+[Illustrations] -- support --> [brand personality]
+[Illustrations] -- require --> [consistent sizing]  
+[Illustrations] -- require --> [consistent naming]
+[Component properties] -- allow --> [customization of components]
+[Variants] -- represent --> [different states of a component]
+[Variants] -- represent --> [different versions of a component]
+[Patterns] -- are --> [fixed combinations of components]
+[Patterns] -- are for --> [specific use cases]
+[Documentation] -- communicates --> [how to use design system]
+[Maintenance processes] -- keep --> [design system updated over time]
+
+</result>

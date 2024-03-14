@@ -1,8 +1,8 @@
 import argparse
 import zmq
 import logging
-from figma_llm.models.llm_manager import LLMManager
-from figma_llm.utils.config import Config
+from chaski.models.llm import LLMManager
+from chaski.utils.config import Config
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
