@@ -1,6 +1,11 @@
+#!/usr/bin/env python -B
+
+import sys
+sys.dont_write_bytecode = True # to keep things clean
 from chaski.models.llm import LLM
 from chaski.utils.config import Config
 from chaski.utils.path_utils import get_outputs_dir
+
 
 # regular mistral instruct format
 def prompt_mistral(query, *args, **kwargs):

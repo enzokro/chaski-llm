@@ -1,6 +1,11 @@
+#!/usr/bin/env python -B
+
+import sys
+sys.dont_write_bytecode = True # to keep things clean
 from fastcore.xtras import Path
 from chaski.graphs.builder import GraphBuilder
 from chaski.utils.path_utils import get_outputs_dir, get_project_root
+
 
 def main():
     """
