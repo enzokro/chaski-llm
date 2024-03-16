@@ -11,7 +11,6 @@ TOP_P = 0.95
 DO_SAMPLE = True
 
 
-
 ## INKBOT MODEL SETUP
 ######################################################################
 # set the Inkbot model

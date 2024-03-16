@@ -4,7 +4,7 @@ from fastcore.basics import store_attr
 from logging.handlers import TimedRotatingFileHandler
 
 class Logger:
-    """Manages the logging configuration for the application.
+    """Handles logging setup and config.
     
     NOTE: meant to be used when we are running in the cloud.
     """

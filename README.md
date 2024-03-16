@@ -1,54 +1,18 @@
-# Figma LLM Library
+# Chaski
 
-Welcome to the Figma LLM Library - the ultimate way to take your Figma project to the next level. 
-
+Chaski is a powerful and flexible LLM harness built using `llama-cpp-python`. It provides a seamless interface for working with Large Language Models (LLMs) and offers advanced features such as embeddings and knowledge graph generation.
 
 ## Key Features
 
-- **Versatile LLM Integration**: Connect effortlessly with leading LLM providers like Llama, ensuring broad compatibility and flexibility.
-- **Efficient Embedding Storage**: Utilize the `EmbeddingStorage` class for optimal management of embeddings, enabling quick storage and retrieval.
-- **Flexible Embedding Extraction**: The `EmbeddingModel` class provides a streamlined process for extracting embeddings, adaptable to various requirements.
-- **Retrieval-Augmented Generation**: Elevate LLM outputs with RAG capabilities, enriching responses with contextually relevant information.
-- **Customizable and Extensible**: A modular architecture allows for easy customization and extension to fit your specific needs.
-- **Comprehensive Documentation**: Full access to detailed documentation and illustrative examples, empowering you to make the most of the library.
+- **LLM Integration**: Chaski seamlessly integrates with LLMs using the `llama-cpp-python` library, allowing you to leverage the power of state-of-the-art language models.  
 
+- **Chat Interface**: Chaski comes with a user-friendly chat interface that allows users to interact with the LLM, input prompts, and view generated responses. The chat interface is built using a web framework and can be easily customized and extended.  
 
-## Project Structure
+- **Embeddings Support**: Chaski provides functionality to generate, store, and retrieve embeddings from text documents. It utilizes efficient embedding storage and retrieval techniques to enable fast similarity search and retrieval of relevant information.  
 
-The library's structure is designed for ease of navigation and extendibility:
+- **Retrieval-Augmented Generation (RAG)**: Chaski supports Retrieval-Augmented Generation, a technique that enhances the LLM's response generation by retrieving relevant information from an external knowledge source. RAG enables the LLM to provide more accurate and contextually relevant responses.  
 
-```bash
-figma_llm/
-├── embeds/              # Embedding handling
-│   ├── db.py            # EmbeddingStorage class for embeddings management
-│   └── extract.py       # EmbeddingModel class for extraction
-├── models/              # LLM interaction
-│   └── llm_manager.py   # Manages LLM interactions and RAG workflows
-├── server/              # Server setup and web interface
-│   ├── run.py           # Server startup script
-│   ├── web_api.py       # Server startup script
-│   └── templates/       # HTML templates for the web interface
-└── utils/               # Utility functions and classes
-    ├── config.py        # Configuration settings
-    ├── distances.py     # Distance calculation utilities
-    └── txt_chunk.py     # Text chunking utilities
-├── app.py               # Application entry point
-```
-
-- `embeds/`: Contains modules for embedding storage and extraction.
-  - `db.py`: Defines the EmbeddingStorage class for storing and retrieving embeddings.
-  - `extract.py`: Defines the EmbeddingModel class for extracting embeddings from text.
-- `models/`: Contains the LLM-related modules.
-  - `llm_manager.py`: Defines the LLMManager class for interacting with the Llama library and managing the RAG workflow.
-- `server/`: Contains the server-related modules.
-  - `web_api.py`: Defines the API endpoints and routes for the web interface.
-  - `run.py`: A script for running the web server.
-  - `templates/`: Contains HTML templates for the web interface.
-- `utils/`: Contains utility modules.
-  - `config.py`: Defines the configuration classes for the application.
-  - `distances.py`: Provides distance calculation functions for similarity search.
-  - `txt_chunk.py`: Provides text chunking utilities.
-- `app.py`: The main entry point of the application.
+- **Knowledge Graph Generation**: Chaski includes a knowledge graph builder that can extract entities, relationships, and attributes from unstructured text documents and construct a structured knowledge graph. This feature enables users to gain insights and perform complex reasoning tasks based on the extracted knowledge.  
 
 ## Getting Started
 
@@ -56,79 +20,176 @@ figma_llm/
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/figma-llm.git
-    cd figma-llm
+    git clone https://github.com/enzokro/chaski-llm.git
+    cd chaski-llm
     ```
-2. **Install dependencies**:
+2. **Install the library and its dependencies**:
     ```bash
+    pip install -e .
     pip install -r requirements.txt
     ```
+
+### Project Structure
+
+Below is a high-level overview of Chaski:
+
+```bash
+chaski/
+├── app.py
+├── embeds
+│   ├── db.py
+│   ├── engine.py
+│   └── extract.py
+├── graphs
+│   └── builder.py
+├── models
+│   └── llm.py
+├── server
+│   ├── main.py
+│   └── templates
+│       └── index.html
+└── utils
+    ├── config.py
+    ├── distances.py
+    ├── logging.py
+    ├── path_utils.py
+    └── txt_chunk.py
+```
 
 
 ### Configuration
 
-Customize your setup by adjusting the `Config` class in `figma_llm/utils/config.py`:
+Customize your setup by adjusting the `Config` class in `chaski_llm/utils/config.py`:
 
-- `MODEL_PATH`: Path to the LLM model file.
+- `MODEL_PATH`: Path to your LLM model. Can also pass in `model_path` at runtime.
 - `DEFAULT_EMBEDDINGS`: Default settings for embedding models.
 
 
-## Running the Application
+## Running the Chat Interface
 
-To launch the Figma LLM server:
+To launch the Chaski server:
 
 ```bash
-python figma_llm/app.py --host localhost --port 5000
+python chaski/app.py --host localhost --port 5000
 ```
 
-Access the web interface by navigating to http://localhost:5000 in your browser.
+Then navigate to http://localhost:5000 in your browser to bring up the chat interface.  
 
 
-## API Endpoints
+### API Endpoints
 
-Explore the versatile endpoints the Figma LLM server offers:
+The Chaski server currently supports the following endpoints:
 
 - **GET /**: Access the welcoming face of the web interface, designed to be intuitive and user-friendly, guiding you through the process of inputting prompts and viewing responses.
 
-- **POST /**: Submit your linguistic queries through this endpoint. It expects a `prompt` parameter in the request form data, utilizing the power of LLM to generate insightful and contextually relevant responses.
+- **POST /**: Submit your `prompt` in the request form data, utilizing the power of LLM to generate insightful and contextually relevant responses.
 
 - **POST /stream**: For continuous interaction with the LLM, this endpoint offers a streaming response capability. It's perfect for applications requiring real-time feedback, dynamically updating the response as more data becomes available.
 
 
-## Embedding and Storing Documents
+## Embedding and Storing Documents  
 
-Efficiently embedding and storing documents is a cornerstone of leveraging LLMs for enhanced language understanding. Here's how you can do it with the Figma LLM Library:
-
-1. **Document Embedding**: Transform textual content into rich, meaningful embeddings that capture the essence and context of your documents. This process is streamlined and efficient, thanks to the `EmbeddingModel` class.
-
-2. **Storing for Retrieval**: With the `EmbeddingStorage` class, these embeddings are not just processed but also systematically stored, making them readily available for future retrieval. This is essential for applications relying on quick access to pre-processed information.
+Chaski provides functionality to embed and store text documents for efficient retrieval and similarity search. Here's an example of how to embed and store documents using Chaski:
 
 ```python
-documents = [
+from chaski.models.llm import LLM
+from chaski.utils.config import Config
+from chaski.utils.path_utils import get_outputs_dir
+
+# Initialize the LLM
+llm = LLM(
+    model_path=Config.MODEL_PATH,
+    use_embeddings=True,  # Enable embeddings
+    embedding_model_info=Config.DEFAULT_EMBEDDINGS,  # Use default embedding settings
+)
+
+# Sample documents to embed and store
+sample_documents = [
     "The capital of France is Paris.",
     "The Eiffel Tower is a famous landmark in Paris.",
+    "France is known for its delicious cuisine, including croissants and baguettes.",
+    "The Louvre Museum in Paris houses the famous painting, the Mona Lisa.",
 ]
 
-for doc in documents:
-    llm_manager.embed_and_store(doc)
-llm_manager.embedding_storage._save_to_file()
+# Embed and store the sample documents
+for doc in sample_documents:
+    llm.embed_and_store(doc)
+
+# Save the embeddings to a file for persistence
+out_dir = get_outputs_dir() / 'embeds'
+file_path = out_dir / "example_embeddings"
+llm.embeds.save_to_file(file_path)
 ```
 
-This simple yet powerful functionality forms the backbone of applications that require rapid access to pre-computed linguistic insights, making your development process smoother and more effective.
+## Generating Responses with RAG  
 
-
-## Generating Responses with RAG
-
-The Retrieval-Augmented Generation (RAG) feature is a game-changer, enhancing the quality of LLM-generated responses by providing relevant context. Here’s how you can utilize RAG to create responses that are not only accurate but also rich in detail and relevance:
-
-1. **Contextual Relevance**: By retrieving related embeddings from your stored documents, RAG ensures that the generated responses are not just generic but tailored to the specific context of the query.
-
-2. **Leveraging Embeddings**: The embeddings act as a bridge between the query and the vast knowledge encapsulated in your dataset, allowing for responses that demonstrate a deep understanding of the subject matter.
+Chaski supports Retrieval-Augmented Generation (RAG) to enhance the LLM's response generation. Here's an example of how to use RAG with Chaski:
 
 ```python
-query = "Tell me about a famous landmark in France."
-top_similar = llm_manager.embedding_storage.find_top_n(llm_manager.embedding_model.embed(query), n=2)
+from chaski.models.llm import LLM
+from chaski.utils.config import Config
+from chaski.utils.path_utils import get_outputs_dir
 
+# Initialize the LLM
+llm = LLM(
+    model_path=Config.MODEL_PATH,
+    use_embeddings=True,  # Enable embeddings
+    embedding_model_info=Config.DEFAULT_EMBEDDINGS,  # Use default embedding settings
+)
+
+# Load the embeddings from a saved file
+file_path = get_outputs_dir() / 'embeds' / "example_embeddings"
+llm.embeds.load_from_file(file_path)
+
+# Define a new query to search the embeddings
+query = "Tell me about a famous landmark in France."
+
+# Search the embeddings for the top-n most similar to the query
+top_n = 2
+top_similar = llm.embeds.find_top_n(query, n=top_n)
+
+# Extract the context from the top similar embeddings
 context = "\n".join([text for _, _, text in top_similar])
-rag_response = llm_manager.generate_response(query, context=context)
+
+# Generate a response using the RAG-augmented prompt
+rag_response = llm.generate_response(rag_prompt_mistral(query, context))
 ```
+
+In this example, we load the previously stored embeddings, search for the top-n most similar embeddings to a given query, extract the relevant context, and generate a response using the RAG-augmented prompt.
+
+## Knowledge Graph Generation 
+Chaski includes a knowledge graph builder that can extract entities, relationships, and attributes from unstructured text documents and construct a structured knowledge graph. Here's an example of how to use the knowledge graph builder:
+
+```python
+from chaski.graphs.builder import GraphBuilder
+from chaski.utils.path_utils import get_outputs_dir, get_project_root
+
+# Set up the graph builder
+graph_builder = GraphBuilder()
+
+# Directory with the extracted text documents
+documents_dir = get_project_root() / "data/figma_documents"
+
+# Iterate over the documents in the directory
+for fid in documents_dir.ls():
+    # Read the document
+    with open(fid, "r") as file:
+        user_context = file.read()
+
+    # Generate the Knowledge Graph
+    knowledge_graph = graph_builder.build_graph(
+        user_context=user_context,
+        user_message="",  # Use the default Graph-building user prompt
+    )
+
+    # Save the Knowledge Graph to a file
+    out_dir = get_outputs_dir() / 'graphs'
+    with open(out_dir / f"{fid.stem}_graph.txt", "w") as file:
+        file.write(knowledge_graph)
+```
+
+In this example, we set up the knowledge graph builder, iterate over the text documents in a specified directory, generate a knowledge graph for each document, and save the knowledge graph to a file.
+
+Please note that the examples provided assume the necessary dependencies and configurations are in place. Refer to the respective modules and classes for more details on their usage and customization options.
+
+Feel free to explore the Chaski library and leverage its capabilities to build powerful LLM-based applications with embeddings, knowledge graphs, and retrieval-augmented generation!

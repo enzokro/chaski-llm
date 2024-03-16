@@ -30,11 +30,12 @@ class LLM:
         ):
         store_attr()
 
+        # max number of tokens to generate
+        self.max_tokens = kwargs.get("max_tokens", Config.MAX_TOKENS)
+
         # initialize the llm
         self.llm = Llama(model_path=model_path, chat_format=chat_format, **kwargs)
         logger.info(f"Loaded LLM model from {model_path}")
-
-        self.max_tokens = kwargs.get("max_tokens", Config.MAX_TOKENS)
 
         # initialize the embeddings engine
         if use_embeddings:
