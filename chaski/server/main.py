@@ -1,63 +1,99 @@
-import logging
-from typing import Optional, Union
-from flask import Flask, request, render_template, jsonify, Response
-import fire
+"""Main server module for the chaski-llm application."""
+
+from typing import Iterator, Optional, Union
+
+from flask import Flask, Response, jsonify, render_template, request
 
 from chaski.models.llm import LLM
 from chaski.utils.config import Config
+from chaski.utils.logging import Logger
 
-# Setup logger for server activities
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# set up logging
+logger = Logger(do_setup=False).get_logger(__name__)
 
-# Initialize Flask app
-app = Flask(__name__)
 
-# Server's conversation history
-history = []
+def create_app(
+    model_path: str = Config.MODEL_PATH,
+    use_embeddings: bool = Config.USE_EMBEDDINGS,
+    chat_format: Optional[str] = None,
+) -> Flask:
+    """Creates and configures the LLM Flask application.
 
-def initialize_llm_manager(model_path: str, use_embeddings: bool, chat_format: Optional[str]):
-    """Initialize LLM Manager with configured settings."""
-    model_path = model_path or Config.MODEL_PATH
-    return LLM(model_path=model_path, use_embeddings=use_embeddings, chat_format=chat_format)
+    Args:
+        model_path: The path to the pre-trained `.gguf` model file.
+        use_embeddings: Whether to enable embeddings.
+        chat_format: The chat interface for the LLM. Inferred when possible.
 
-def run_app(host: str, port: int, model_path: str = "", use_embeddings: bool = False, chat_format: Optional[str] = None):
-    """Configure and start the server."""
-    llm_manager = initialize_llm_manager(model_path, use_embeddings, chat_format)
+    Returns:
+        The configured Flask app.
+    """
+    app = Flask(__name__)
+    llm_manager = LLM(model_path, use_embeddings, chat_format)
 
     @app.route("/", methods=["GET", "POST"])
     def index() -> Union[str, Response]:
-        """Handle index route, generating responses for prompts."""
+        """Handles the index route and generates responses to prompts.
+
+        Returns:
+            The rendered HTML template or a JSON response with an error message.
+        """
         if request.method == "POST":
-            prompt = request.form.get("prompt")
+            prompt = request.form.get("prompt", "")
             try:
                 response = llm_manager.generate_response(prompt)
-                history.append({"prompt": prompt, "response": response})
-            except Exception as e:
-                logger.exception("Error generating response: %s", e)
+                app.config["history"].append({"prompt": prompt, "response": response})
+            except Exception as exc:
+                logger.exception(f"Error generating response: {exc}")
                 return jsonify({"error": "Failed to generate response."}), 500
-        return render_template("index.html", history=history)
+        return render_template("index.html", history=app.config["history"])
 
     @app.route("/stream", methods=["POST"])
-    def stream() -> Response:
-        """Stream responses for prompts."""
-        prompt = request.form.get("prompt")
+    def stream() -> Union[Response, tuple[Response, int]]:
+        """Streams responses to prompts on the fly.
+
+        Returns:
+            A streaming response with the generated text or a JSON response with an error message.
+        """
+        prompt = request.form.get("prompt", "")
         try:
             response_generator = llm_manager.generate_response_stream(prompt)
             return Response(response_generator, mimetype="text/event-stream")
-        except Exception as e:
-            logger.exception("Error in response stream: %s", e)
+        except Exception as exc:
+            logger.exception(f"Error in response stream: {exc}")
             return jsonify({"error": "Failed to stream response."}), 500
 
-    # Start the Flask server
-    logger.info("Server starting on http://%s:%s", host, port)
-    app.run(host=host, port=port, debug=False)
+    app.config["history"] = []
+    return app
+
+
+def run_server(
+    host: str = Config.HOST,
+    port: int = Config.PORT,
+    model_path: str = Config.MODEL_PATH,
+    use_embeddings: bool = Config.USE_EMBEDDINGS,
+    chat_format: Optional[str] = None,
+    debug: bool = False,
+) -> None:
+    """Runs the chaski-llm server.
+
+    Args:
+        host: The host address to bind the server to.
+        port: The port number to listen on.
+        model_path: The path to the pre-trained `.gguf` model file.
+        use_embeddings: Whether to enable embeddings.
+        chat_format: The chat interface for the LLM. Inferred when possible.
+        debug: Whether to run the app in debug mode.
+    """
+    logger.info(f"Starting chaski-llm server on http://{host}:{port}")
+    app = create_app(model_path, use_embeddings, chat_format)
+    app.run(host=host, port=port, debug=debug)
+
 
 if __name__ == "__main__":
     try:
-        fire.Fire(run_app)
+        run_server()
     except KeyboardInterrupt:
         logger.info("Server shutdown initiated.")
-    except Exception as e:
-        logger.exception("Unexpected error: %s", e)
+    except Exception as exc:
+        logger.exception(f"Unexpected error: {exc}")
         raise

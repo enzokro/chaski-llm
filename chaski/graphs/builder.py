@@ -1,7 +1,12 @@
-from fastcore.basics import store_attr
+"""Knowledge Graph construction module using LLMs."""
+
 from datetime import datetime
+from typing import Optional, Dict, Any
+
+from fastcore.basics import store_attr
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
+from chaski.utils.config import Config
 
 # Sample generation parameters
 MAX_OUTPUT_TOKENS = 4096
@@ -79,77 +84,77 @@ class GraphBuilder:
         return AutoModelForCausalLM.from_pretrained(self.model_name)
 
     def _prepare_prompt(
-            self, 
-            user_context: str, 
-            date: str = None, 
-            user_message: str= "",
-        ) -> str:
-        """
-        Prepares the prompt for the LLM.
+        self,
+        user_context: str,
+        user_message: str = "",
+        date: Optional[str] = None,
+    ) -> str:
+        """Prepares the prompt for the LLM.
+
+        The prompt is constructed using a combination of the current date, task name,
+        system message, user message, and user context. The prompt is formatted using
+        the tokenizer's chat template to ensure compatibility with the LLM.
 
         Args:
-            user_context (str): Context information from the document(s).
-            user_message (str): User message requesting the Knowledge Graph.
-            date Optional[str]: Date to include in the prompt.
+            user_context: Context information from the document(s).
+            user_message: User message requesting the Knowledge Graph.
+            date: Date to include in the prompt (defaults to current date).
 
         Returns:
-            str: Formatted prompt for the LLM.
+            The formatted prompt for the LLM.
         """
         run_date = date or get_today_str()
         prompt_roles = [
             {"role": "meta-current_date", "content": f"{run_date}"},
-            {"role": "meta-task_name",    "content": "kg"},
-            {"role": "system",            "content": self.system_message},
-            {"role": "chat",              "content": ""},
-            {"role": "user",              "content": user_message or self.user_message},
-            {"role": "user_context",      "content": user_context},
+            {"role": "meta-task_name", "content": "kg"},
+            {"role": "system", "content": self.system_message},
+            {"role": "chat", "content": ""},
+            {"role": "user", "content": user_message or self.user_message},
+            {"role": "user_context", "content": user_context},
         ]
         return self.tokenizer.apply_chat_template(prompt_roles, tokenize=False)
 
-    def _generate_response(
-            self, 
-            prompt: str,
-            max_output_tokens: int = MAX_OUTPUT_TOKENS, 
-            **kwargs,
-        ) -> str:
-        """
-        Generates a response from the LLM.
+    def _generate_response(self, prompt: str, **kwargs) -> str:
+        """Generates a response from the LLM.
+
+        The response is generated using the provided prompt and any additional
+        keyword arguments for model generation. The generated output is decoded
+        using the tokenizer and returned as a string.
 
         Args:
-            prompt (str): Formatted prompt for the LLM.
-            max_output_tokens (int): Maximum number of tokens to generate.
-            **kwargs: Additional keyword arguments for generation.
+            prompt: Formatted prompt for the LLM.
+            **kwargs: Additional keyword arguments for model generation.
 
         Returns:
-            str: Generated response from the LLM.
+            The generated response from the LLM.
         """
         input_ids = self.tokenizer.encode(prompt, return_tensors="pt")
         output = self.model.generate(
             input_ids,
-            # max_length=max_output_tokens, # allow the model to output as much as possible
             num_return_sequences=1,
-            temperature=TEMP,
+            **self.generation_kwargs,
             **kwargs,
         )
         return self.tokenizer.decode(output[0], skip_special_tokens=True)
 
-    def build_graph(self, user_context: str, user_message: str = '', **kwargs) -> str:
-        """
-        Builds a Knowledge Graph from the given user message and context.
-        Note: by default no user_message is provided, so the default Inkbot USER_MESSAGE is used.
+    def build_graph(self, user_context: str, user_message: str = "", **kwargs) -> str:
+        """Builds a Knowledge Graph from the given user message and context.
+
+        The Knowledge Graph is constructed by preparing a prompt using the provided
+        user message and context, and then generating a response from the LLM. The
+        generated response represents the extracted Knowledge Graph.
 
         Args:
-            user_message (str): User message requesting the Knowledge Graph.
-            user_context (str): Context information from the document(s).
-            **kwargs: Additional arguments for the `model.generate`.
+            user_context: Context information from the document(s).
+            user_message: User message requesting the Knowledge Graph. If not provided,
+                the default user message from the configuration will be used.
+            **kwargs: Additional keyword arguments for model generation.
 
         Returns:
-            str: The extracted Knowledge Graph.
+            The extracted Knowledge Graph.
         """
-        # optionally override the user message for testing
         if user_message:
             print(f"Overriding user message to: {user_message}")
-        prompt = self._prepare_prompt(user_message, user_context)
+        prompt = self._prepare_prompt(user_context, user_message)
         response = self._generate_response(prompt, **kwargs)
         return response
-    
