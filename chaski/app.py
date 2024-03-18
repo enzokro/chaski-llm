@@ -1,13 +1,12 @@
 import logging
 import fire
-
 from chaski.utils.config import Config
 from chaski.server.main import run_app
-
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
 
 def start(
         host: str = Config.HOST, 
@@ -16,13 +15,14 @@ def start(
         use_embeddings: bool = Config.USE_EMBEDDINGS,
         chat_format: str = None,
     ):
-    """Starts the web server."""
+    """Starts the chaski web server."""
     
     # Log starting information
     logger.info(f"Starting server on {host}:{port}")
     
     # Launch the server with the provided configurations
     run_app(host, port, model_path=model_path, use_embeddings=use_embeddings, chat_format=chat_format)
+
 
 if __name__ == "__main__":
     try:

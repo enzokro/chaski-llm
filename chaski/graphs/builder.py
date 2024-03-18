@@ -98,11 +98,11 @@ class GraphBuilder:
         run_date = date or get_today_str()
         prompt_roles = [
             {"role": "meta-current_date", "content": f"{run_date}"},
-            {"role": "meta-task_name", "content": "kg"},
-            {"role": "system", "content": self.system_message},
-            {"role": "chat", "content": ""},
-            {"role": "user", "content": user_message or self.user_message},
-            {"role": "user_context", "content": user_context},
+            {"role": "meta-task_name",    "content": "kg"},
+            {"role": "system",            "content": self.system_message},
+            {"role": "chat",              "content": ""},
+            {"role": "user",              "content": user_message or self.user_message},
+            {"role": "user_context",      "content": user_context},
         ]
         return self.tokenizer.apply_chat_template(prompt_roles, tokenize=False)
 

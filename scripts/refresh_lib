@@ -1,4 +1,6 @@
 #!/bin/bash
 
-# force update the package
+## NOTE: good to run this ~frequently, updates are constant 
+
+# update the llama-cpp-python library
 pip install llama-cpp-python --upgrade --force-reinstall --no-cache-dir

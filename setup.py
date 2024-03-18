@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="chaski",
     version="0.1.0",
-    description="An LLM python server leveraging llama-cpp-python",
+    description="An LLM server with Embeddings and Knowledge Graphs.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     author="cck",

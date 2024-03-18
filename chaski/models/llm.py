@@ -9,6 +9,7 @@ from chaski.embeds.engine import EmbeddingsEngine
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 def exception_handler(func):
     """Decorator to handle response generation exceptions."""
     def wrapper(self, *args, **kwargs):
