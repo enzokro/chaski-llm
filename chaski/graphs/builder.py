@@ -8,45 +8,6 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from chaski.utils.config import Config
 
-# Sample generation parameters
-MAX_OUTPUT_TOKENS = 4096
-TEMP = 0 # make it ~deterministic
-TOP_K = 50
-TOP_P = 0.95
-DO_SAMPLE = True
-
-
-## INKBOT MODEL SETUP
-######################################################################
-# set the Inkbot model
-# Model Card: `https://huggingface.co/Tostino/Inkbot-13B-8k-0.2`
-INKBOT_MODEL_NAME = "Tostino/Inkbot-13B-8k-0.2"
-
-# # NOTE: chat template for Inkbot
-# chat_template = "<#meta#>\n- Date: {{ (messages|selectattr('role', 'equalto', 'meta-current_date')|list|last).content|trim if (messages|selectattr('role', 'equalto', 'meta-current_date')|list) else '' }}\n- Task: {{ (messages|selectattr('role', 'equalto', 'meta-task_name')|list|last).content|trim if (messages|selectattr('role', 'equalto', 'meta-task_name')|list) else '' }}\n<#system#>\n{{ (messages|selectattr('role', 'equalto', 'system')|list|last).content|trim if (messages|selectattr('role', 'equalto', 'system')|list) else '' }}\n<#chat#>\n{% for message in messages %}\n{% if message['role'] == 'user' %}\n<#user#>\n{{ message['content']|trim -}}\n{% if not loop.last %}\n\n{% endif %}\n{% elif message['role'] == 'assistant' %}\n<#bot#>\n{{ message['content']|trim -}}\n{% if not loop.last %}\n\n{% endif %}\n{% elif message['role'] == 'user_context' %}\n<#user_context#>\n{{ message['content']|trim -}}\n{% if not loop.last %}\n\n{% endif %}\n{% endif %}\n{% endfor %}\n{% if add_generation_prompt and messages[-1]['role'] != 'assistant' %}\n<#bot#>\n{% endif %}"
-
-# sample system message for Inkbot, telling it that it's a generically helpful AI assistant.
-SYSTEM_MESSAGE = "You are an AI assistant who will help the user with all their information requests."
-
-# sample user prompt for Inkbot, asking for Knowledge graph construction.
-USER_MESSAGE = f"""Your task is to construct a comprehensive Knowledge Graph. 
-
-1. Read and understand the Documents: Please read through the document(s) carefully. As you do, extract the important entities (e.g. key concepts, features, tools related to Figma), their attributes, and relationships between them. The goal is to pull out all and only the information relevant to building an accurate Knowledge Graph. Be comprehensive in capturing all the important information from the document(s), but also be precise in how you represent the entities and relationships.  
-
-2. Create Nodes: Designate each of the essential elements identified earlier as a node with a unique ID using random letters from the greek alphabet. If necessary, add subscripts and superscripts to get more ids. Populate each node with relevant details.  
-
-3. Establish and Describe Edges: Determine the relationships between nodes, forming the edges of your Knowledge Graph. For each edge:
-   - Specify the nodes it connects.  
-   - Describe the relationship and its direction.  
-   - Assign a confidence level (high, medium, low) indicating the certainty of the connection.  
-
-4. Represent All Nodes: Make sure all nodes are included in the edge list.  
-
-After constructing the Knowledge Graph, please output it in its entirety as your final response. The Knowledge Graph should be a structured representation of the key concepts and relationships regarding the Figma design tool, enabling further downstream tasks like question-answering about Figma's features and capabilities.
-"""
-## /INKBOT MODEL SETUP
-######################################################################
-
 
 def get_today_str():
     """Get today's date in the format 'YYYY-MM-DD'."""
@@ -58,9 +19,10 @@ class GraphBuilder:
 
     def __init__(
             self, 
-            model_name: str = INKBOT_MODEL_NAME, 
-            system_message: str = SYSTEM_MESSAGE,
-            user_message: str = USER_MESSAGE, 
+            model_name: str = Config.INKBOT_MODEL_NAME, 
+            system_message: str = Config.SYSTEM_MESSAGE,
+            user_message: str = Config.USER_MESSAGE, 
+            generation_kwargs: Optional[Dict[str, Any]] = Config.KG_GENERATION_KWARGS,
             **kwargs,
         ):
         """

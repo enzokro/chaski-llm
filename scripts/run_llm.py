@@ -1,23 +1,25 @@
+"""Standalone LLM script that listens for prompts and generates responses."""
+
 import argparse
-import logging
+import json
 import zmq
+
 from chaski.models.llm import LLM
 from chaski.utils.config import Config
+from chaski.utils.logging import Logger
 
-# Setup logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = Logger(do_setup=False).get_logger(__name__)
 
 
-def parse_arguments():
+def parse_arguments() -> argparse.Namespace:
     """Parses command line arguments for the server."""
     parser = argparse.ArgumentParser(description="Chaski LLM")
-    parser.add_argument("--host", type=str, default="localhost", help="Host for the server.")
-    parser.add_argument("--port", type=int, default=5000, help="ZMQ port for text input/generation.")
+    parser.add_argument("--host", type=str, default=Config.HOST, help="Host for the server.")
+    parser.add_argument("--port", type=int, default=Config.PORT, help="ZMQ port for text input/generation.")
     return parser.parse_args()
 
 
-def setup_zmq_socket(host: str, port: int):
+def setup_zmq_socket(host: str, port: int) -> zmq.Socket:
     """Sets up and returns a ZMQ REP socket bound to `host:port`."""
     context = zmq.Context()
     socket = context.socket(zmq.REP)
@@ -25,36 +27,25 @@ def setup_zmq_socket(host: str, port: int):
     return socket
 
 
-def main():
+def main() -> None:
     """Runs a standalone LLM that listens for prompts and generates responses."""
-
-    # parse cli arguments
     args = parse_arguments()
-
-    # create the default LLM 
     llm_manager = LLM(model_path=Config.MODEL_PATH)
-
-    # setup the socket 
     socket = setup_zmq_socket(args.host, args.port)
     logger.info(f"ZMQ socket listening on {args.host}:{args.port}")
 
     while True:
         try:
-            # wait for data
             data = socket.recv_json()
-
-            # generate and send the response
             response = llm_manager.generate_response(
                 prompt=data["prompt"],
-                max_tokens=data.get("max_tokens", 100),
-                temperature=data.get("temperature", 0.8),
-                top_p=data.get("top_p", 0.95)
+                max_tokens=data.get("max_tokens", Config.MAX_TOKENS),
+                temperature=data.get("temperature", Config.TEMPERATURE),
+                top_p=data.get("top_p", Config.TOP_P),
             )
             socket.send_json({"response": response})
-
-        # log and return exceptions, but do not raise them
-        except Exception as e:
-            logger.error(f"Error during response generation: {e}", exc_info=True)
+        except Exception as exc:
+            logger.exception(f"Error during response generation: {exc}")
             socket.send_json({"error": "An error occurred. Please try again."})
 
 
