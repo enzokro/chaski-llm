@@ -1,7 +1,6 @@
 """Standalone LLM script that listens for prompts and generates responses."""
 
 import argparse
-import json
 import zmq
 
 from chaski.models.llm import LLM

@@ -1,6 +1,6 @@
 """Main server module for the chaski-llm application."""
 
-from typing import Iterator, Optional, Union
+from typing import Optional, Union
 
 from flask import Flask, Response, jsonify, render_template, request
 

@@ -13,3 +13,4 @@ fire
 pyzmq
 protofbuf
 nbdev
+r2r[parsing,eval]

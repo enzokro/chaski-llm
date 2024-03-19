@@ -21,6 +21,7 @@ class Config:
     TOP_P = 0.95
 
     # Embedding settings
+    USE_EMBEDDINGS = True
     DEFAULT_EMBEDDINGS = {
         "model_name": "all-MiniLM-L6-v2",
         "model_library": "sentence-transformers",
