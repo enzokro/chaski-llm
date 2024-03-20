@@ -13,7 +13,7 @@ logger = Logger(do_setup=False).get_logger(__name__)
 
 
 def exception_handler(func):
-    """Decorator that handles exceptions during response generation."""
+    """Decorator that logs and raises exceptions."""
     def wrapper(self, *args, **kwargs):
         try:
             return func(self, *args, **kwargs)

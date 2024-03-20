@@ -11,6 +11,6 @@ nltk
 flask
 fire
 pyzmq
-protofbuf
+protobuf
 nbdev
 r2r[parsing,eval]

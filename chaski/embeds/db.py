@@ -7,7 +7,7 @@ from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 
-from chaski.utils.distances import cosine
+from chaski.utils.distances import cosine_distance
 from chaski.utils.logging import Logger
 
 logger = Logger(do_setup=False).get_logger(__name__)
@@ -47,7 +47,7 @@ class EmbeddingStorage:
         ids = []
         for i, embedding in enumerate(embeddings):
             metadata = metadatas[i] if metadatas else {}
-            text = metadata.get("text", str(embedding.tolist()))
+            text = metadata.get("text")# , str(embedding.tolist()))
             embedding_id = generate_id(text)
             self.embeddings[embedding_id] = embedding
             self.metadata[embedding_id] = metadata
@@ -91,8 +91,8 @@ class EmbeddingStorage:
             self.embeddings.pop(embedding_id, None)
             self.metadata.pop(embedding_id, None)
 
-    def find_top_n(self, query_embedding: np.ndarray, n: int = 5, largest_first: bool = False) -> List[Tuple[str, float, str]]:
-        """Finds the top-n embeddings most similar to the query embedding.
+    def find_top_n(self, query_embedding: np.ndarray, n: int = 3, largest_first: bool = False) -> List[Tuple[str, float, str]]:
+        """Finds the top-n embeddings most similar to the `query_embedding`.
 
         Args:
             query_embedding: The query embedding to compare against.
@@ -103,8 +103,8 @@ class EmbeddingStorage:
             A list of tuples containing the ID, distance, and text of the top-n embeddings.
         """
         distances = [
-            (embedding_id, cosine(query_embedding, embedding), self.metadata.get(embedding_id, {}).get("text", ""))
-            for embedding_id, embedding in self.embeddings.items()
+            (eid, cosine_distance(query_embedding, embed), self.metadata[eid].get("text", ""))
+            for eid, embed in self.embeddings.items()
         ]
         return sorted(distances, key=lambda x: x[1], reverse=largest_first)[:n]
 

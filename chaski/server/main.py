@@ -40,6 +40,9 @@ def create_app(
         if request.method == "POST":
             prompt = request.form.get("prompt", "")
             try:
+                # check for an empty prompt
+                if not prompt: return jsonify({"error": "Prompt is empty."}), 500
+                # generate a response and add it to the history
                 response = llm_manager.generate_response(prompt)
                 app.config["history"].append({"prompt": prompt, "response": response})
             except Exception as exc:

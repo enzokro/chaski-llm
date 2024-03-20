@@ -12,10 +12,7 @@ class Config:
 
     # LLM settings
     # NOTE: hardcoded to my model paths
-    MODEL_PATH = os.environ.get(
-        "MODEL_PATH",
-        "/Users/cck/repos/llama.cpp/models/Mistral-7B-Instruct-v0.2/mistral-7b-instruct-v0.2.Q4_K_S.gguf",
-    )
+    MODEL_PATH = "/Users/cck/projects/chaski-llm/chaski/models/Mistral-7B-Instruct-v0.2/mistral-7b-instruct-v0.2.Q4_K_S.gguf"
     MAX_TOKENS = 256
     TEMPERATURE = 0.1
     TOP_P = 0.95

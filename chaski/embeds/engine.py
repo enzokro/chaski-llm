@@ -1,4 +1,4 @@
-"""Embeddings engine module for the chaski-llm application."""
+"""Embeddings engine for the chaski-llm application."""
 
 from typing import Any, Dict, List, Optional, Tuple
 

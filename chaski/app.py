@@ -41,7 +41,7 @@ def start_server(
 
 
 def main():
-    """Server entry point."""
+    """Starts the server."""
     try:
         # run as a fire command-line interface
         fire.Fire(start_server)
