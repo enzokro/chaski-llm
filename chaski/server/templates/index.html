@@ -97,6 +97,7 @@
                 <input type="file" name="file" accept=".txt" multiple>
                 <input type="submit" value="Upload">
             </form>
+            <div id="uploaded-files"></div>
         </section>
         <section class="response">
             <h2>Response:</h2>
@@ -158,6 +159,7 @@
             });
 
             var uploadForm = document.getElementById("upload-form");
+            var uploadedFilesContainer = document.getElementById("uploaded-files");
             uploadForm.addEventListener("submit", function (event) {
                 event.preventDefault();
                 var fileInput = document.querySelector("input[name='file']");
@@ -175,14 +177,29 @@
                 .then(function (response) {
                     if (response.ok) {
                         alert("Files uploaded successfully!");
+                        updateUploadedFilesList(files);
                         fileInput.value = "";
                     } else {
                         alert("Error uploading files.");
                     }
                 });
             });
-            
+
+            function updateUploadedFilesList(files) {
+                uploadedFilesContainer.innerHTML = "";
+                var fileList = document.createElement("ul");
+
+                for (var i = 0; i < files.length; i++) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = files[i].name;
+                    fileList.appendChild(listItem);
+                }
+
+                uploadedFilesContainer.appendChild(fileList);
+            }
+
         });
+
     </script>
 </body>
 </html>
