@@ -2,7 +2,7 @@ import re
 import nltk
 import spacy
 
-def chunk_text(text, chunk_size=256, chunk_overlap=20, method="fixed", **kwargs):
+def chunk_text(text, chunk_size=256, chunk_overlap=20, method="sentence", **kwargs):
     """
     Chunk the input text into smaller segments.
 

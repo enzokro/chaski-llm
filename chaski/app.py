@@ -10,7 +10,7 @@ from chaski.utils.logging import Logger
 
 
 # setup logging
-logger = Logger(do_setup=False).get_logger(__name__)
+logger = Logger(do_setup=True).get_logger(__name__)
 
 
 def start_server(

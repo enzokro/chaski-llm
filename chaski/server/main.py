@@ -42,9 +42,23 @@ def create_app(
             try:
                 # check for an empty prompt
                 if not prompt: return jsonify({"error": "Prompt is empty."}), 500
-                # generate a response and add it to the history
+
+                # Generate a response based on the availability of embeddings
+                if llm_manager.use_embeddings and llm_manager.embeds:
+                    # Search for top-n most similar embeddings
+                    top_n = 3
+                    top_similar = llm_manager.embeds.find_top_n(prompt, n=top_n)
+                    context = "\n".join([text for _, _, text in top_similar])
+
+                    prompt = f"{prompt}\nContext for Instructions: ```{context}```"
+                    logger.info(f"Using RAG prompt: {prompt}")
+
+                # generate a response
                 response = llm_manager.generate_response(prompt)
+
+                # append the prompt and response to the history
                 app.config["history"].append({"prompt": prompt, "response": response})
+                
             except Exception as exc:
                 logger.exception(f"Error generating response: {exc}")
                 return jsonify({"error": "Failed to generate response."}), 500
@@ -59,11 +73,34 @@ def create_app(
         """
         prompt = request.form.get("prompt", "")
         try:
+            # augment the prompt based on the availability of embeddings
+            if llm_manager.use_embeddings and llm_manager.embeds:
+                # Search for top-n most similar embeddings
+                top_n = 3
+                top_similar = llm_manager.embeds.find_top_n(prompt, n=top_n)
+                context = "\n".join([text for _, _, text in top_similar])
+
+                prompt = f"{prompt}\nContext for Instructions: ```{context}```"
+                logger.info(f"Using RAG prompt: {prompt}")
+
+            # generate a response
             response_generator = llm_manager.generate_response_stream(prompt)
+
             return Response(response_generator, mimetype="text/event-stream")
         except Exception as exc:
             logger.exception(f"Error in response stream: {exc}")
             return jsonify({"error": "Failed to stream response."}), 500
+
+    @app.route("/upload", methods=["POST"])
+    def upload_files():
+        uploaded_files = request.files.getlist("files")
+
+        for file in uploaded_files:
+            if file.filename.endswith(".txt"):
+                text_content = file.read().decode("utf-8")
+                llm_manager.embed_and_store(text_content)
+
+        return "Files uploaded successfully", 200
 
     app.config["history"] = []
     return app
@@ -88,15 +125,5 @@ def run_server(
         debug: Whether to run the app in debug mode.
     """
     logger.info(f"Starting chaski-llm server on http://{host}:{port}")
-    app = create_app(model_path, use_embeddings, chat_format)
+    app = create_app(model_path, chat_format, use_embeddings)
     app.run(host=host, port=port, debug=debug)
-
-
-if __name__ == "__main__":
-    try:
-        run_server()
-    except KeyboardInterrupt:
-        logger.info("Server shutdown initiated.")
-    except Exception as exc:
-        logger.exception(f"Unexpected error: {exc}")
-        raise

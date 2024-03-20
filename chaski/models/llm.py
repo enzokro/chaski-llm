@@ -44,6 +44,7 @@ class LLM:
             **kwargs: Additional keyword arguments for the LLM.
         """
         store_attr()
+        logger.warning(f"LLM EMBEDS: {use_embeddings}")
         self.max_tokens = kwargs.get("max_tokens", Config.MAX_TOKENS)
 
         self.llm = Llama(model_path=model_path, chat_format=chat_format, **kwargs)
@@ -51,6 +52,7 @@ class LLM:
 
         if use_embeddings:
             self.init_embeddings(embedding_model_kwargs or Config.DEFAULT_EMBEDDINGS)
+            logger.info(f"Embeddings engine loaded.")
 
     def init_embeddings(self, embedding_model_info: Dict[str, Any]):
         """Initializes the embedding model and storage.
