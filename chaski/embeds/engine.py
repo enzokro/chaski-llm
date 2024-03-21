@@ -20,11 +20,15 @@ class EmbeddingsEngine:
         self.embedding_storage = EmbeddingStorage(file_path=model_info["file_path"])
         logger.info("Embedding model and storage initialized.")
     
-    def embed_and_store(self, text: str, **kwargs):
+    def embed_and_store(self, text: str, do_chunk=True, **kwargs):
         """Chunks text, extracts embeddings, and stores them."""
-        chunks = chunk_text(text, **kwargs)
-        embeddings = [self.embedding_model.embed(chunk) for chunk in chunks]
-        metadatas = [{"chunk_index": i, "text": chunk} for i, chunk in enumerate(chunks)]
+        if do_chunk:
+            chunks = chunk_text(text, **kwargs)
+            embeddings = [self.embedding_model.embed(chunk) for chunk in chunks]
+            metadatas = [{"chunk_index": i, "text": chunk} for i, chunk in enumerate(chunks)]
+        else:
+            embeddings = [self.embedding_model.embed(text)]
+            metadatas = [{"chunk_index": 0, "text": text}]
         self.embedding_storage.add(embeddings=embeddings, metadatas=metadatas)
     
     def find_top_n(self, query: str, n: int = 5, largest_first=False) -> List[Tuple[str, float, str]]:

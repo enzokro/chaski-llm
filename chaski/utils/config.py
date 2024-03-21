@@ -13,7 +13,7 @@ class Config:
     # LLM settings
     # NOTE: hardcoded to my model paths
     MODEL_PATH = "/Users/cck/projects/chaski-llm/chaski/models/Mistral-7B-Instruct-v0.2/mistral-7b-instruct-v0.2.Q4_K_S.gguf"
-    MAX_TOKENS = 256
+    MAX_TOKENS = 512
     TEMPERATURE = 0.1
     TOP_P = 0.95
 
@@ -50,6 +50,7 @@ class Config:
         "top_p": 0.95,
         "do_sample": True,
     }
+    SYSTEM_MESSAGE = "You are a helpful AI assistant."# tasked with constructing a comprehensive Knowledge Graph. Please follow the instructions below to complete the task."
 
     # Logging settings
     LOG_LEVEL = "INFO"
