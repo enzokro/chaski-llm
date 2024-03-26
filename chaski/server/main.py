@@ -1,4 +1,4 @@
-"""Main server module for the chaski-llm application."""
+"""Server module for the chaski-llm application."""
 
 from typing import Optional, Union
 
@@ -28,7 +28,7 @@ def create_app(
         The configured Flask app.
     """
     app = Flask(__name__)
-    llm_manager = LLM(model_path, use_embeddings, chat_format)
+    llm = LLM(model_path, use_embeddings, chat_format)
 
     @app.route("/", methods=["GET", "POST"])
     def index() -> Union[str, Response]:
@@ -39,22 +39,22 @@ def create_app(
         """
         if request.method == "POST":
             prompt = request.form.get("prompt", "")
+            top_n  = int(request.form.get("top_n", 3))
             try:
                 # check for an empty prompt
-                if not prompt: return jsonify({"error": "Prompt is empty."}), 500
+                if not prompt: return jsonify({"warning": "Prompt is empty."}), 500
 
-                # Generate a response based on the availability of embeddings
-                if llm_manager.use_embeddings and llm_manager.embeds:
-                    # Search for top-n most similar embeddings
-                    top_n = 3
-                    top_similar = llm_manager.embeds.find_top_n(prompt, n=top_n)
+                # generate a response with context from the embeddings
+                if llm.use_embeddings and llm.embeds:
+                    # search for top-n most similar embeddings
+                    top_similar = llm.embeds.find_top_n(prompt, n=top_n)
                     context = "\n".join([text for _, _, text in top_similar])
 
-                    prompt = f"{prompt}\nContext for Instructions: ```{context}```"
+                    prompt = f"{prompt}\Context to frame your response:\n```{context}\n```"
                     logger.info(f"Using RAG prompt: {prompt}")
 
                 # generate a response
-                response = llm_manager.generate_response(prompt)
+                response = llm.generate_response(prompt)
 
                 # append the prompt and response to the history
                 app.config["history"].append({"prompt": prompt, "response": response})
@@ -62,6 +62,7 @@ def create_app(
             except Exception as exc:
                 logger.exception(f"Error generating response: {exc}")
                 return jsonify({"error": "Failed to generate response."}), 500
+            
         return render_template("index.html", history=app.config["history"])
 
     @app.route("/stream", methods=["POST"])
@@ -72,19 +73,19 @@ def create_app(
             A streaming response with the generated text or a JSON response with an error message.
         """
         prompt = request.form.get("prompt", "")
+        top_n  = int(request.form.get("top_n", 3))
         try:
             # augment the prompt based on the availability of embeddings
-            if llm_manager.use_embeddings and llm_manager.embeds:
+            if llm.use_embeddings and llm.embeds:
                 # Search for top-n most similar embeddings
-                top_n = 3
-                top_similar = llm_manager.embeds.find_top_n(prompt, n=top_n)
+                top_similar = llm.embeds.find_top_n(prompt, n=top_n)
                 context = "\n".join([text for _, _, text in top_similar])
 
-                prompt = f"{prompt}\nContext for Instructions: ```{context}```"
+                prompt = f"{prompt}\Context to frame your response:\n```{context}\n```"
                 logger.info(f"Using RAG prompt: {prompt}")
 
             # generate a response
-            response_generator = llm_manager.generate_response_stream(prompt)
+            response_generator = llm.generate_response_stream(prompt)
 
             return Response(response_generator, mimetype="text/event-stream")
         except Exception as exc:
@@ -98,7 +99,7 @@ def create_app(
         for file in uploaded_files:
             if file.filename.endswith(".txt"):
                 text_content = file.read().decode("utf-8")
-                llm_manager.embed_and_store(text_content)
+                llm.embed_and_store(text_content)
 
         return "Files uploaded successfully", 200
 

@@ -27,7 +27,7 @@ def start_server(
         port: The port number to listen on.
         model_path: The path to the pre-trained `.gguf` model file.
         use_embeddings: Whether to enable embeddings.
-        chat_format: The chat interface for the LLM. Inferred when possible.
+        chat_format: The chat template format for the LLM. Inferred when possible.
     """
 
     # log some startup information
@@ -45,12 +45,13 @@ def main():
     try:
         # run as a fire command-line interface
         fire.Fire(start_server)
+
     except KeyboardInterrupt:
-        # graceful shutdown on keyboard interrupt
         logger.info("Received KeyboardInterrupt, shutting down gracefully...")
+
     except Exception as exc:
         # log and raise any errors
-        logger.exception(f"An unexpected error occurred: {exc}")
+        logger.exception(f"Unexpected error: {exc}")
         raise
 
 

@@ -15,7 +15,11 @@ def prompt_mistral(query, *args, **kwargs):
 # Define a function to create a RAG-formatted prompt
 def rag_prompt_mistral(query, context):
     """Generates a prompt formatted for RAG with user query and context."""
-    return f"{query}\nContext for Instructions: ```{context}```:"
+    return f"""Using the given context:
+{context}
+
+Please answer the following question: {query}
+"""
 
 
 # Where to save the output embeddings
@@ -35,10 +39,10 @@ llm = LLM(
 
 # Embed and store a series of sample documents
 sample_documents = [
-    "The capital of France is Paris.",
-    "The Eiffel Tower is a famous landmark in Paris.",
-    "France is known for its delicious cuisine, including croissants and baguettes.",
-    "The Louvre Museum in Paris houses the famous painting, the Mona Lisa.",
+    "Bizcochos de Cayambe are a regional treat in Ecuador.",
+    "The bizcochos de Cayambe have a hard, crunchy exterior and flaky interior.",
+    "Bizcochos de Cayambe are baked twice, which gives them their signature texture.",
+    "Coffee and tea are excellent pairings for bizcochos de Cayambe.",
 ]
 
 # Embed and store the sample documents
@@ -57,11 +61,11 @@ llm.embeds.load_from_file(file_path)
 
 
 # Define a new query to search the embeddings
-query = "Tell me about a famous landmark in France."
+query = "Tell me about Bizcochos de Cayambe."
 
 # Search the embeddings for the top-n most similar to the query
 print("Searching for similar documents...")
-top_n = 2
+top_n = 3
 top_similar = llm.embeds.find_top_n(query, n=top_n)
 
 # Extract the context from the top similar embeddings
