@@ -106,3 +106,4 @@ print(f"Response without RAG:\n{response}")
 print(f"RAG Prompt: {rag_prompt_mistral(query, context)}")
 print(f"Response with RAG:\n{rag_response}")
 ################################################
+
