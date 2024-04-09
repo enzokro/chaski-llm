@@ -1,0 +1,76 @@
+About reference:
+
+Q1: What is the primary purpose of reference guides, and how does this purpose differ from that of tutorials and how-to guides?
+A1: The primary purpose of reference guides is to describe the machinery and how to operate it, focusing on providing succinct, orderly information. Unlike tutorials and how-to guides, which are led by the needs of the user, reference material is led by the product it describes.
+
+Q2: Why do users need reference material, and what role does good technical reference play in supporting their work?
+A2: Users need reference material because they require truth and certainty—firm platforms on which to stand while they work. Good technical reference is essential to provide users with the confidence to do their work by offering authoritative, accurate information about the product and its internal machinery.
+
+Q3: How does the content of reference guides for software differ from that of other types of documentation?
+A3: In the case of software, reference guides describe the software itself—APIs, classes, functions, and so on—and how to use them. This content is distinct from tutorials and how-to guides, which focus on user needs and tasks, and explanation, which provides context and understanding.
+
+Reference as description:
+
+Q1: What characteristics should reference material exhibit to effectively serve its purpose?
+A1: Reference material should be austere and to the point, designed for consultation rather than reading. It should be wholly authoritative, leaving no doubt or ambiguity, and providing the user with the information they need without requiring them to verify it themselves.
+
+Q2: How is reference material similar to a map, and what purpose does this similarity serve?
+A2: Reference material is like a map in that it tells you what you need to know about the territory (the product and its internal machinery) without having to go out and check the territory for yourself. This similarity serves to provide users with a reliable, accurate representation of the product they can use to navigate and understand it.
+
+Q3: What is a common misconception among software developers regarding auto-generated reference material, and why is this problematic?
+A3: Many software developers think that auto-generated reference material, such as API documentation, is all the documentation required. While auto-generated reference can be a powerful way to ensure accuracy, it is not sufficient on its own and should be complemented by other types of documentation that address user needs and provide context.
+
+Food and cooking:
+
+Q1: What type of information might one seek when consulting an encyclopedia about a food ingredient like liquorice?
+A1: When consulting an encyclopedia about a food ingredient like liquorice, one might seek accurate, up-to-date, and comprehensive information about its properties, chemical composition, interactions with other ingredients, related ingredients or plants, and potential health implications.
+
+Q2: How does the information presented in an encyclopedia article about a food ingredient differ from what one would expect to find in a recipe or cooking guide?
+A2: An encyclopedia article about a food ingredient focuses on presenting factual information in a consistent manner across different entries. It does not include recipes or suggestions on how to cook with the ingredient, as its purpose is to inform rather than instruct.
+
+Q3: What are some examples of the types of information one might find in an encyclopedia entry about liquorice?
+A3: An encyclopedia entry about liquorice might include information such as its classification as a flowering plant of the bean family Fabaceae, or warnings about potential adverse effects resulting from excessive consumption. These facts help the reader understand the ingredient's nature and characteristics without providing guidance on its use in cooking.
+
+Writing a good reference guide:
+
+Q1: Why is it important for the structure of reference documentation to mirror the structure of the product it describes?
+A1: Having the structure of the reference documentation mirror the structure of the product helps users navigate and understand both the documentation and the product simultaneously. Just as a map's correspondence to its territory aids in wayfinding, the logical arrangement of reference material should make sense of the product's architecture and conceptual relationships.
+
+Q2: How can consistency in reference material benefit the reader, and what are some areas where consistency is particularly important?
+A2: Consistency in reference material benefits the reader by making the information easier to understand and navigate. Key areas where consistency is important include structure, language, terminology, and tone. While there may be opportunities in other forms of writing to showcase variety and style, reference material is not the place for such flourishes.
+
+Q3: What is the primary job of technical reference, and how can introducing other elements detract from this job?
+A3: The primary job of technical reference is to describe the product clearly, accurately, and comprehensively. Introducing other elements such as instruction, explanation, discussion, or speculation can distract from this core purpose and make it harder for the reader to find the information they need. Instead, reference material should link to other types of documentation where appropriate.
+
+Provide examples:
+
+Q1: How can examples be used to enhance reference material without detracting from its primary purpose?
+A1: Examples can be used to provide illustration that helps readers understand reference material without becoming a distraction from the job of describing. For instance, an example of usage of a command can succinctly illustrate the command and its context, enhancing the reader's understanding without deviating from the reference format.
+
+Q2: What is the key difference between examples in reference material and examples in tutorials or how-to guides?
+A2: Examples in reference material serve to illustrate and clarify the description of the product, while examples in tutorials or how-to guides are used to guide the user through a learning process or task. Reference examples should be concise and focused on illuminating the product's characteristics, rather than teaching or instructing.
+
+Q3: How can writers ensure that examples in reference material are effective and appropriate?
+A3: To ensure that examples in reference material are effective and appropriate, writers should focus on creating examples that are directly relevant to the item being described, provide clear and concise illustration, and avoid introducing extraneous information or instructions. The examples should be carefully chosen to enhance understanding without detracting from the overall purpose of the reference guide.
+
+Be accurate:
+
+Q1: Why is accuracy so critical in reference material, and what are the potential consequences of discrepancies between the product and its description?
+A1: Accuracy is critical in reference material because users rely on it as a source of truth and certainty about the product. Any discrepancies between the product and its description in the reference guide will inevitably lead users astray, causing confusion, errors, and potentially damaging trust in the documentation as a whole.
+
+Q2: How can writers ensure that reference material remains accurate and up-to-date, particularly in the context of evolving products?
+A2: To ensure that reference material remains accurate and up-to-date, writers must establish processes for regularly reviewing and updating the documentation in line with changes to the product. This may involve close collaboration with product teams, automated checks, and user feedback channels to identify and address any discrepancies as soon as they arise.
+
+Q3: What role can automation play in maintaining the accuracy of reference material, and what are the limitations of this approach?
+A3: Automation, such as auto-generating reference documentation from code, can play a significant role in maintaining accuracy by ensuring that the documentation remains in sync with the product as it evolves. However, this approach has limitations, as auto-generated material may lack context, examples, and other elements that enhance understanding, and may require manual review and enhancement to be fully effective.
+
+The language of reference guides:
+
+Q1: What types of language and structures are commonly used in reference guides to describe the machinery and its behavior?
+A1: Reference guides commonly use language and structures such as "X is an example of Y," "W needs to be initialized using Z," or "This option does that" to state facts about the machinery and its behavior. These concise, declarative statements help to clearly and accurately describe the product without introducing ambiguity or extraneous information.
+
+Q2: How can lists be employed in reference material to effectively convey information about the product?
+A2: Lists can be employed in reference material to effectively convey information such as commands, options, operations, features, flags, limitations, and error messages. By presenting this information in a clear, ordered format, lists make it easy for users to quickly find and understand the specific items they need to reference.
+
+Q3: What role do warnings and imperatives play in reference material, and how should they be used?
+A3: Warnings and imperatives, such as "You must use A," "You must not apply B unless C," or "Never D," play an important role in reference material by alerting users to critical requirements, limitations, or potential dangers associated with the product. These statements should be used judiciously and precisely to convey essential information without overwhelming the user or detracting from the overall clarity of the reference guide.

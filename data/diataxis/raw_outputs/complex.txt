@@ -1,0 +1,98 @@
+The basics:
+
+Q1: How can the application of Diátaxis be described for most documentation projects, and what factors contribute to its straightforward implementation?
+A1: The application of Diátaxis to most documentation projects can be described as fairly straightforward, largely due to the clear boundaries of the product defining the domain of concern and the ease of arranging contents according to the principles of tutorials, how-to guides, reference, and explanation.
+
+Q2: What role do landing pages play in the basic structure of documentation organized according to Diátaxis principles?
+A2: Landing pages play a crucial role in the basic structure of documentation organized according to Diátaxis principles, serving as overview pages that provide context for the content within each section, such as describing what a tutorial has to offer or introducing the available how-to guides.
+
+Q3: How can the basic structure of Diátaxis be effectively applied to large documentation sets, and what considerations should be made as the size of the documentation grows?
+A3: The basic structure of Diátaxis can be effectively applied to large documentation sets by maintaining the clear division into tutorials, how-to guides, reference, and explanation. However, as the size of the documentation grows, it may be necessary to introduce grouping of pages within sections to maintain organization and ease of navigation.
+
+Adding a layer of hierarchy:
+
+Q1: How can additional layers of hierarchy be used to address specific needs within a documentation section, and what is an example of this in practice?
+A1: Additional layers of hierarchy can be used to address specific needs within a documentation section by creating sub-sections that focus on particular aspects of the topic. For example, within the "how-to guides" section, a sub-section could be created to address different installation options, such as local installation, Docker, virtual machines, and Linux containers.
+
+Q2: What is the purpose of having an overview landing page at each level of the hierarchy within a documentation section?
+A2: The purpose of having an overview landing page at each level of the hierarchy within a documentation section is to provide orientation for the reader, introducing the content that follows and helping them navigate the structure of the documentation.
+
+Q3: How does the addition of layers of hierarchy in documentation organized according to Diátaxis principles help to maintain the effectiveness of the system, even for very large documentation sets?
+A3: The addition of layers of hierarchy in documentation organized according to Diátaxis principles helps to maintain the effectiveness of the system by breaking down large sections into more manageable sub-sections, each with its own clear focus and purpose. This allows the documentation to scale while still adhering to the principles of separating content by user needs and goals.
+
+The problem of lists:
+
+Q1: What is the maximum comfortable length for lists in documentation, and why is it important to adhere to this limit?
+A1: The maximum comfortable length for lists in documentation is generally considered to be seven items, as lists longer than this become very hard for humans to read unless they have an inherent mechanical order, such as numerical or alphabetical.
+
+Q2: What should documentation authors do if they find themselves with lists that exceed the comfortable length limit in their tables of contents?
+A2: If documentation authors find themselves with lists that exceed the comfortable length limit in their tables of contents, they should seek ways to break the lists up into smaller ones, prioritizing the reader's experience over the integrity of any particular organizational scheme.
+
+Q3: How does the principle of fitting user needs, which underlies Diátaxis, relate to the problem of long lists in documentation?
+A3: The principle of fitting user needs, which underlies Diátaxis, suggests that if the execution of Diátaxis leads to formats that seem uncomfortable or ugly, such as long lists, then the documentation author needs to use the system differently to prioritize the reader's experience. Diátaxis works because it aligns with user needs, and this should be the primary consideration when organizing documentation.
+
+Overviews and introductory text:
+
+Q1: What should the content of a landing page in documentation organized according to Diátaxis principles read like, and why is this important?
+A1: The content of a landing page in documentation organized according to Diátaxis principles should read like an overview, introducing the content that follows rather than simply presenting lists of other content. This is important because it helps to orient the reader and provide context for the information they are about to encounter.
+
+Q2: How can elements like headings and snippets of introductory text enhance the reader's experience on a landing page, and what is an example of this in practice?
+A2: Elements like headings and snippets of introductory text can enhance the reader's experience on a landing page by catching their eye and providing context for the content that follows. For example, a how-to guide landing page might include a brief description of the types of guides available, such as installation guides and deployment and scaling guides, with short introductions to each category.
+
+Q3: Why is it important for documentation authors to remember that they are writing for human users, rather than simply fulfilling the demands of an organizational scheme like Diátaxis?
+A3: It is important for documentation authors to remember that they are writing for human users, rather than simply fulfilling the demands of an organizational scheme like Diátaxis, because the ultimate goal of documentation is to meet the needs of the reader. While Diátaxis provides a valuable framework for organizing content, the reader's experience should always be the top priority, and authors should be willing to adapt their approach as needed to ensure that the documentation is accessible, engaging, and informative.
+
+Two-dimensional problems:
+
+Q1: What is an example of a "two-dimensional problem" that can arise when applying Diátaxis to documentation, and how does this challenge the straightforward implementation of the system?
+A1: An example of a "two-dimensional problem" that can arise when applying Diátaxis to documentation is when the structure outlined by Diátaxis intersects with another structure, such as topic areas within the documentation or very different user types. This can challenge the straightforward implementation of the system by introducing competing organizational priorities and requiring a more nuanced approach to structuring the content.
+
+Q2: How might the presence of different user types, such as users, developers, and contributors, impact the organization of documentation according to Diátaxis principles?
+A2: The presence of different user types, such as users, developers, and contributors, might impact the organization of documentation according to Diátaxis principles by requiring the documentation to address very different concerns for each audience. This could lead to the creation of separate sections for each user type, each with its own set of tutorials, how-to guides, reference, and explanation, or to a more complex structure that allows for shared content while still addressing the specific needs of each audience.
+
+Q3: What are some of the factors that can contribute to the need for a more complex documentation structure, even when applying Diátaxis principles?
+A3: Some of the factors that can contribute to the need for a more complex documentation structure, even when applying Diátaxis principles, include the presence of distinct use cases for the same product (such as use on land, sea, and air), the need to address the requirements of different user types (such as users, developers, and contributors), and the impact of external factors on the product's implementation (such as deployment on different public clouds with varying workflows and constraints).
+
+What is the problem?:
+
+Q1: Is the problem of managing complex documentation structures unique to Diátaxis, or is it a more general challenge in documentation design?
+A1: The problem of managing complex documentation structures is not unique to Diátaxis but is a general challenge in documentation design. However, Diátaxis can help to reveal the problem by bringing it into focus and demanding that it be addressed as part of the documentation organization process.
+
+Q2: What is a common misunderstanding about Diátaxis that can lead to confusion when dealing with complex documentation structures?
+A2: A common misunderstanding about Diátaxis is that it is a rigid scheme into which documentation must be placed, with four distinct boxes corresponding to tutorials, how-to guides, reference, and explanation. In reality, Diátaxis posits four different kinds of documentation around which content should be structured, but this does not necessarily mean that there must be only four divisions in the documentation hierarchy.
+
+Q3: How can the recognition that Diátaxis is not a rigid, four-box structure help documentation authors to approach the challenge of organizing complex content?
+A3: The recognition that Diátaxis is not a rigid, four-box structure can help documentation authors to approach the challenge of organizing complex content by encouraging them to focus on the underlying principles of the system, such as addressing different user needs and structuring content accordingly, rather than feeling constrained by a particular format. This can lead to more flexible and effective documentation structures that still adhere to the core ideas of Diátaxis.
+
+Diátaxis as an approach:
+
+Q1: How should Diátaxis be understood, if not as a simple diagram or set of boxes into which content must be placed?
+A1: Diátaxis should be understood as an approach or way of working with documentation that identifies four different user needs (learning, doing, information, and understanding) and uses them to guide the authoring and structuring of content. While this approach often leads to a clear division of content into tutorials, how-to guides, reference, and explanation, this structure is an outcome of the underlying principles, not the end goal in itself.
+
+Q2: What is the relationship between the four categories of documentation identified by Diátaxis and the overall structure of a documentation set?
+A2: The four categories of documentation identified by Diátaxis (tutorials, how-to guides, reference, and explanation) serve as the basis around which documentation should be structured, but they do not necessarily dictate a strict, four-part hierarchy. The structure of the documentation should emerge from the application of Diátaxis principles to the specific needs of the product, its users, and the content itself.
+
+Q3: How can focusing on the underlying principles of Diátaxis, rather than a particular structural template, help documentation authors to create more effective and user-friendly content?
+A3: Focusing on the underlying principles of Diátaxis, such as identifying and addressing different user needs, can help documentation authors to create more effective and user-friendly content by ensuring that the structure and organization of the documentation emerge from a deep understanding of the audience and their goals. This approach allows for greater flexibility in the face of complex content and unique product requirements while still maintaining the benefits of a structured, purposeful documentation system.
+
+User-first thinking:
+
+Q1: What is the key principle that underpins Diátaxis, and how should this guide documentation authors in their approach to organizing content?
+A1: The key principle that underpins Diátaxis is attention to user needs, and this should guide documentation authors in their approach to organizing content by focusing on the product as it is experienced and understood by the user, rather than as it is conceived by its creators.
+
+Q2: How can documentation authors determine whether a product with multiple use cases (such as use on land, sea, and air) should be treated as a single entity or as separate products for the purposes of documentation?
+A2: Documentation authors can determine whether a product with multiple use cases should be treated as a single entity or as separate products for the purposes of documentation by considering how the users themselves perceive and interact with the product. If the use cases are so distinct that they effectively constitute different products in the minds of the users, then it may be appropriate to structure the documentation accordingly, with separate sections or even separate documentation sets for each use case.
+
+Q3: How might documentation authors approach the challenge of organizing content for a product with diverse user types, such as users, developers, and contributors?
+A3: When organizing content for a product with diverse user types, such as users, developers, and contributors, documentation authors should consider the relationships between these user types and the extent to which their needs overlap or diverge. For example, if developers typically need to understand how the product is used in order to build effectively with it, then it may make sense to structure the documentation in a way that allows developer-focused content to build upon user-focused content in some areas (such as tutorials), while keeping other areas (such as how-to guides) separate and targeted to each audience's specific needs.
+
+Let documentation be complex if necessary:
+
+Q1: What is the key consideration when determining how complex a documentation structure should be, and why is it important to allow for complexity when necessary?
+A1: The key consideration when determining how complex a documentation structure should be is the needs of the users and the requirements of the content itself. It is important to allow for complexity when necessary because oversimplifying the documentation structure in the name of adherence to a particular system or template can ultimately make the content less accessible and useful to its intended audience.
+
+Q2: How can documentation authors balance the need for complexity in documentation structure with the goal of making the content easy to navigate and use?
+A2: Documentation authors can balance the need for complexity in documentation structure with the goal of making the content easy to navigate and use by ensuring that the structure, however complex, is logical and incorporates patterns that align with the needs and expectations of the users. This may involve the use of clear navigation elements, consistent labeling and organization, and appropriate use of cross-referencing and linking between related content areas.
+
+Q3: What is the relationship between the complexity of a documentation structure and the underlying principles of Diátaxis?
+A3: The relationship between the complexity of a documentation structure and the underlying principles of Diátaxis is one of flexibility and adaptation. While Diátaxis provides a valuable framework for organizing documentation around user needs and goals, it is not a rigid template that must be followed at the expense of clarity, usability, and appropriateness to the content and audience. A complex documentation structure that emerges from a thoughtful application of Diátaxis principles and a deep understanding of user needs is ultimately more effective than a simpler structure that fails to address the unique requirements of the product and its users.

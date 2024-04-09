@@ -1,0 +1,97 @@
+The map of needs:
+
+Q1: What is a common problem faced by documentation creators when organizing their work?
+A1: In the absence of a clear, generalized documentation architecture, documentation creators often try to structure their work around characteristics or features of the product, which rarely leads to successful results.
+
+Q2: How can adopting a scheme that answers the question "how to arrange documentation in general" help improve documentation?
+A2: Adopting a scheme that answers this question can improve documentation by providing lists of content types, making it more orderly and consistent for both authors and users.
+
+Q3: What is a limitation of using a list of content types to organize documentation?
+A3: Authors may find themselves needing to write content that fails to fit well within the categories provided by a list, or struggling to rewrite existing material to conform to the list.
+
+Q4: Why might authors feel a sense of arbitrariness about the structure they are working with when using a list of content types?
+A4: Authors might feel a sense of arbitrariness because there is no clear reason why one particular list of content types is chosen over another, leading to confusion when competing lists are proposed.
+
+The Diátaxis map:
+
+Q5: What is the most immediately striking feature of the Diátaxis framework?
+A5: The most immediately striking feature of Diátaxis is its map, which is a memorable and approachable way of organizing documentation.
+
+Q6: How does the two-dimensional structure of the Diátaxis map help guide and shape the documentation material it contains?
+A6: The two-dimensional structure of the Diátaxis map helps guide and shape documentation by placing different forms of documentation into relationship with each other, with each one occupying a space in the mental territory it outlines and the boundaries between them highlighting their distinctions.
+
+Q7: What is the key reason why the Diátaxis map is effective as a guide to organizing documentation?
+A7: The Diátaxis map is effective as a guide to organizing documentation because it is a map of needs, underpinned by a systematic description and analysis of generalized user needs.
+
+Q8: How does using the Diátaxis map result in documentation that takes less effort to create and maintain?
+A8: Using the Diátaxis map results in documentation that takes less effort to create and maintain because it is based on a clear understanding of user needs, providing guidance and structure that makes the process more efficient and effective.
+
+Needs:
+
+Q9: Who is the user whose needs Diátaxis serves?
+A9: The user whose needs Diátaxis serves is the practitioner in a domain of skill, such as someone using a programming language, flying a particular aircraft, or engaging in a discipline or profession.
+
+Q10: What does successful engagement in a craft or skill involve?
+A10: Successful engagement in a craft or skill involves both theoretical grasp (knowledge and understanding) and an ability to apply that in practice, working with the tools and materials of the craft.
+
+Q11: What are the two modes a practitioner is in at any moment in their craft?
+A11: At any moment in their craft, a practitioner is either in the mode of study (learning, acquiring, building up their skill) or the mode of work (applying, using, exercising their skill).
+
+Q12: What are the two needs that documentation must meet to serve the practitioner?
+A12: Documentation serving the practitioner must meet the needs both of theory and its practical application, as well as the needs of acquiring and applying knowledge.
+
+Axes of knowledge:
+
+Q13: What are the two axes of knowledge that Diátaxis uses to divide documentation?
+A13: Diátaxis divides documentation across two axes of knowledge: theory/practice and acquisition/application.
+
+Q14: What is the difference between documentation that contains theoretical knowledge and documentation that describes practical actions?
+A14: Documentation that contains theoretical knowledge focuses on propositional knowledge, while documentation that describes practical actions focuses on the steps and processes involved in doing something.
+
+Q15: What is the difference between documentation that serves the acquisition of knowledge and documentation that serves the application of knowledge?
+A15: Documentation that serves the acquisition of knowledge is concerned with helping users learn and build up their skills, while documentation that serves the application of knowledge is concerned with helping users apply their skills to actual work.
+
+Q16: How does organizing documentation across the two axes of knowledge result in the four forms of documentation in the Diátaxis map?
+A16: Organizing documentation across the two axes of knowledge results in four forms of documentation: tutorials (theory/acquisition), how-to guides (practice/acquisition), reference (theory/application), and explanation (practice/application).
+
+Characteristics of documentation:
+
+Q17: What are the four forms of documentation in the Diátaxis map, and what are their main purposes?
+A17: The four forms of documentation in the Diátaxis map are tutorials (to introduce and educate), how-to guides (to guide and demonstrate), reference (to state, describe, and inform), and explanation (to explain, clarify, and discuss).
+
+Q18: How does organizing documentation according to the Diátaxis map provide clear expectations to the reader and guidance to the author?
+A18: Organizing documentation according to the Diátaxis map makes it clear what the purpose of any particular piece of content is, specifies how it should be written, and shows where it should be placed, providing clear expectations to the reader and guidance to the author.
+
+Q19: What is the main difference between tutorials and how-to guides?
+A19: The main difference between tutorials and how-to guides is that tutorials are oriented towards learning and aim to introduce and educate, while how-to guides are oriented towards tasks and aim to guide and demonstrate how to solve specific problems.
+
+Q20: What is the main difference between reference and explanation?
+A20: The main difference between reference and explanation is that reference is a dry description that states, describes, and informs, while explanation is a discursive exploration that explains, clarifies, and discusses.
+
+Collapse of the structure:
+
+Q21: What is the natural tendency that leads to the blurring of distinctions between the different forms of documentation?
+A21: There is a natural affinity between each of the different forms of documentation and its neighbors on the Diátaxis map, which leads to a tendency to blur the distinctions between them.
+
+Q22: What is the most common structural problem that arises when the distinctions between the different forms of documentation are allowed to blur?
+A22: The most common structural problem that arises is a complete or partial collapse of tutorials and how-to guides into each other, while explanation spills over into both tutorials and reference material.
+
+Q23: What is the relationship between tutorials and how-to guides that leads to their collapse into each other?
+A23: Tutorials and how-to guides both describe practical steps, which leads to a natural tendency for them to collapse into each other when their distinctions are not maintained.
+
+Q24: What is the relationship between reference and explanation that leads to explanation spilling over into reference material?
+A24: Reference and explanation both contain theoretical knowledge, which leads to a natural tendency for explanation to spill over into reference material when their distinctions are not maintained.
+
+The cycle of interaction:
+
+Q25: What is the purpose of the cycle of interaction in the Diátaxis framework?
+A25: The cycle of interaction in the Diátaxis framework is intended to help documentation better serve users as they progress through different phases of learning and using a product.
+
+Q26: Does a user have to encounter the different kinds of documentation in the order of tutorials, how-to guides, technical reference, and explanation?
+A26: No, a user does not have to encounter the different kinds of documentation in a specific order. In practice, a user may enter the documentation anywhere in search of guidance on a particular subject, and their needs will change from moment to moment as they use the documentation.
+
+Q27: What is the significance of the ordering of the different phases in the cycle of interaction?
+A27: While a user may not necessarily encounter the different kinds of documentation in a specific order, the ordering of the phases in the cycle of interaction corresponds to the way that people actually become expert in a craft, progressing from learning to application to reflection.
+
+Q28: What are the four phases of the cycle of interaction, and what is the focus of each phase?
+A28: The four phases of the cycle of interaction are the learning-oriented phase (diving straight in to learn a skill), the task-oriented phase (putting the skill to work), the information-oriented phase (consulting technical reference to acquire necessary knowledge), and the explanation-oriented phase (reflecting on practice and knowledge to understand the whole).

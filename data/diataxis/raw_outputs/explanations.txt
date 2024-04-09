@@ -1,0 +1,76 @@
+About explanation:
+
+Q1: What is the main focus of explanation in documentation, and how does it differ from tutorials, how-to guides, and reference material?
+A1: Explanation focuses on clarifying, deepening, and broadening the reader's understanding of a subject, approaching it from a higher perspective and different angles. It is not directly concerned with the user's actions or the close-up view of the machinery, unlike tutorials, how-to guides, and reference material.
+
+Q2: How does the format of explanation allow for a different style of considering a topic compared to other forms of documentation?
+A2: The format of explanation allows for a more relaxed, freer way of considering a topic, as it is not tied to the user's immediate actions or the specifics of the machinery. This enables explanation to become a discussion, joining things together and making sense to read while away from the product itself.
+
+Q3: What is the key characteristic of explanation that distinguishes it from the other three forms of documentation?
+A3: The key characteristic of explanation is that it is understanding-oriented, focusing on clarifying and illuminating a particular topic rather than directly guiding the user's practice or work, setting it apart from tutorials, how-to guides, and reference material.
+
+The value and place of explanation:
+
+Q1: Why is explanation sometimes mistakenly seen as being of lesser importance compared to other forms of documentation?
+A1: Explanation is sometimes mistakenly seen as less important because it doesn't have a direct part in a user's immediate practice or work, unlike tutorials, how-to guides, and reference material. However, this perception is flawed, as explanation plays a crucial role in helping practitioners understand their craft and weave together their knowledge.
+
+Q2: What is the significance of the connection between words meaning "understanding" and words meaning "to hold or grasp" in many European languages?
+A2: The connection between words meaning "understanding" and words meaning "to hold or grasp" in many European languages highlights the importance of being able to possess and internalize knowledge. Explanation helps seal together the components of a practitioner's mastery of a craft, making it their own and ensuring that their knowledge is not loose, fragmented, or fragile.
+
+Q3: What are some alternative names for the "Explanation" section in documentation, and what do they suggest about the nature of this type of content?
+A3: Alternative names for the "Explanation" section include "Discussion," "Background," "Conceptual guides," and "Topics." These names suggest that explanation is a form of discourse that provides context, explores concepts, and delves into the underlying ideas and principles of a subject, rather than focusing on practical instructions or reference details.
+
+Explanation and its boundaries:
+
+Q1: Why is explanation often scattered in small parcels across other sections of documentation instead of being given its own dedicated section?
+A1: Explanation is often scattered across other sections of documentation because it can be challenging to write good explanatory material, and its open-ended nature can give writers too many possibilities. Without a clear starting point or conclusion, it is easier to include explanation in small doses within other, more well-defined sections.
+
+Q2: What can serve as a useful prompt for writing explanatory content, helping to define its scope and boundaries?
+A2: A real or imagined "why" question can serve as a useful prompt for writing explanatory content, providing a focus and helping to define the scope and boundaries of the material. In the absence of such a question, the writer must draw reasonable lines to mark out the area they will cover in their explanation.
+
+Q3: How do tutorials, how-to guides, and reference material differ from explanation in terms of the clarity of their scope and boundaries?
+A3: Tutorials, how-to guides, and reference material have a more clearly defined scope compared to explanation, as they are bounded by specific user needs, tasks, or the scope of the machinery itself. Explanation, on the other hand, has a more open-ended nature, requiring the writer to make conscious decisions about the boundaries of their discussion.
+
+Analogy from cooking:
+
+Q1: How does Harold McGee's book "On Food and Cooking" exemplify the role of explanation in the context of a craft?
+A1: "On Food and Cooking" exemplifies the role of explanation by placing food and cooking in the context of history, society, science, and technology, without providing recipes or instructions. It changes the reader's understanding and thinking about the craft of cooking, even if it doesn't directly alter their practical actions in the kitchen.
+
+Q2: What is the key difference between a book like "On Food and Cooking" and a cookbook or a reference guide about cooking?
+A2: The key difference is that "On Food and Cooking" focuses on deepening the reader's understanding and knowledge of the subject, exploring it from multiple perspectives, while a cookbook provides practical recipes and a reference guide offers specific technical information. It is a work of explanation rather than instruction or reference.
+
+Q3: When and how might someone engage with a work of explanation like "On Food and Cooking," and how does this differ from their use of instructional or reference material?
+A3: Someone might read a work of explanation like "On Food and Cooking" at their leisure, away from the immediate context of the kitchen, when they want to think about cooking at a higher level and understand more about the subject. This differs from their use of instructional or reference material, which they would consult while actively engaged in the practice of cooking or seeking specific information.
+
+Writing good explanation:
+
+Q1: How does the concept of weaving a web of understanding relate to the goal of making connections when writing explanation?
+A1: The concept of weaving a web of understanding relates to the goal of making connections in explanation by emphasizing the importance of linking ideas, concepts, and even seemingly unrelated topics to create a rich, interconnected knowledge base for the reader. By making these connections, the writer helps the reader develop a deeper, more comprehensive understanding of the subject.
+
+Q2: What are some examples of the types of context and background information that can be included in explanation to help readers understand why things are the way they are?
+A2: Examples of context and background information that can be included in explanation are design decisions, historical reasons, technical constraints, implications, and specific examples. These elements help readers understand the factors that have shaped the current state of the subject and provide a foundation for grasping its underlying principles and reasoning.
+
+Q3: How does thinking of explanation as a discussion help writers approach the inclusion of alternatives, counter-examples, and contrary opinions?
+A3: Thinking of explanation as a discussion helps writers approach the inclusion of alternatives, counter-examples, and contrary opinions by encouraging them to consider the subject from multiple angles and present a balanced, nuanced view. By weighing up different perspectives and acknowledging valid alternatives, writers can create a more engaging and thought-provoking explanation that invites readers to think critically about the topic.
+
+Don't instruct, or provide technical reference:
+
+Q1: What is the main risk of allowing instructional or technical reference content to creep into explanation, and why should writers be cautious of this?
+A1: The main risk of allowing instructional or technical reference content to creep into explanation is that it dilutes the purpose and effectiveness of the explanation itself. By including content that is already covered in other sections of the documentation, writers may confuse readers and detract from the core goal of deepening understanding and providing context.
+
+Q2: How can writers ensure that their explanations remain focused on their intended purpose and avoid overlapping with the functions of other documentation sections?
+A2: Writers can ensure that their explanations remain focused by constantly asking themselves whether the content they are including serves to clarify, deepen, or broaden the reader's understanding of the subject. If the content veers into providing instructions or technical descriptions, it should be removed and potentially relocated to the appropriate section of the documentation.
+
+Q3: What are the benefits of maintaining a clear separation between explanation and other forms of documentation, such as tutorials and reference material?
+A3: The benefits of maintaining a clear separation between explanation and other forms of documentation include providing a more organized and coherent resource for readers, allowing them to easily locate the type of information they need, and ensuring that each section of the documentation fulfills its intended purpose effectively. By keeping explanation focused on understanding, writers can create more valuable and impactful content.
+
+The language of explanation:
+
+Q1: How can writers use language to provide context and help readers understand the reasons behind certain aspects of a subject?
+A1: Writers can use language to provide context and help readers understand the reasons behind certain aspects of a subject by using phrases like "The reason for x is because historically, y..." or "W is better than z, because..." These types of explanations give readers insight into the factors that have influenced the development or current state of the subject.
+
+Q2: In what ways can writers use analogies and comparisons in explanation, and what is the purpose of doing so?
+A2: Writers can use analogies and comparisons in explanation by stating things like "An x in system y is analogous to a w in system z." The purpose of using analogies and comparisons is to help readers understand complex or unfamiliar concepts by relating them to something they already know or understand, making the new information more accessible and easier to grasp.
+
+Q3: How can writers balance the inclusion of alternative viewpoints or user preferences in their explanations while still providing clear and cohesive information?
+A3: Writers can balance the inclusion of alternative viewpoints or user preferences in their explanations by using language that acknowledges these differences while still providing a clear overall picture. For example, "Some users prefer w (because z). This can be a good approach, but..." This type of language shows that the writer is aware of different perspectives but is still able to offer guidance and insight based on their understanding of the subject.

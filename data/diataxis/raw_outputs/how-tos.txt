@@ -1,0 +1,76 @@
+About how-to guides:
+
+Q1: How do how-to guides help users understand the capabilities of a product?
+A1: A rich list of well-written how-to guides that address the right subjects can help frame the picture of what a product can actually do, serving as an encouraging suggestion of the product's capabilities.
+
+Q2: What is the key characteristic that distinguishes how-to guides from other forms of documentation?
+A2: How-to guides are goal-oriented, focusing on providing directions that take the reader through the steps required to solve a specific real-world problem or achieve a particular end.
+
+Q3: What impact can well-written and relevant how-to guides have on the readership of documentation?
+A3: If how-to guides are well-written and address the right subjects, they are likely to be the most-read sections of the documentation, as users seek guidance on accomplishing specific tasks with the product.
+
+Tutorials vs how-to guides:
+
+Q1: What is the main similarity between tutorials and how-to guides that can lead to their conflation?
+A1: Both tutorials and how-to guides describe a series of practical steps that lead to the completion of some task, which can easily lead to their conflation in documentation.
+
+Q2: How do the user needs served by tutorials and how-to guides differ, despite their superficial similarity?
+A2: Tutorials serve the need for learning and acquiring skills, while how-to guides serve the need for accomplishing specific tasks or solving particular problems. Conflating these distinct user needs is at the root of many difficulties in documentation.
+
+Q3: What is the consequence of conflating tutorials and how-to guides in documentation?
+A3: Conflating tutorials and how-to guides can lead to documentation that fails to effectively meet the specific needs of users at different stages of their interaction with the product, causing frustration and potential abandonment of the product.
+
+Food and cooking:
+
+Q1: How does a recipe, as a model for a how-to guide, differ from a cooking lesson in terms of its purpose and the expectations of the user?
+A1: A recipe focuses on guiding the user through the steps to make a specific dish, assuming basic competence, while a cooking lesson aims to teach the user how to cook. A user expecting a recipe would be disappointed and annoyed if given a cooking lesson instead.
+
+Q2: Why is a recipe not a substitute for a cooking lesson, even though both provide step-by-step instructions?
+A2: A recipe is not a substitute for a cooking lesson because it assumes the user has at least basic competence in cooking and does not aim to teach the foundational skills required to follow the recipe successfully.
+
+Q3: What elements should a good recipe exclude to maintain its focus on the specific dish being made?
+A3: A good recipe should exclude teaching, discussion of context or history, and other digressions that distract from the focus on how to make the specific dish, following a well-established format that prioritizes the sequence of actions required.
+
+Writing a good how-to guide:
+
+Q1: How does the starting point and conclusion of a how-to guide differ from those of a tutorial?
+A1: Unlike a tutorial, a how-to guide does not need to start at the beginning of the whole story and take the reader to the end. It should provide a starting point that the user knows how to reach and a conclusion that answers a real question, fitting into the user's existing workflow.
+
+Q2: What are the key characteristics of a how-to guide that distinguish it from other forms of documentation?
+A2: A how-to guide is focused on tasks or problems, assumes the user knows what they want to achieve, and consists of action and only action, with no digression, explanation, or teaching.
+
+Q3: How does the reliability requirement of a how-to guide differ from that of a tutorial?
+A3: While a tutorial needs to have cast-iron repeatability, a how-to guide should be reliable but does not need to meet the same strict standard, as it is intended to be adaptable to real-world use cases.
+
+Solve a problem:
+
+Q1: What should be the primary concern of a how-to guide, and what is the consequence of deviating from this focus?
+A1: The primary concern of a how-to guide should be the practical problem or task it aims to solve. Adding unnecessary elements, such as explanations, distracts both the writer and the user and dilutes the useful power of the guide.
+
+Q2: How can a how-to guide maintain its focus on solving a problem while still being adaptable to real-world use cases?
+A2: A how-to guide can maintain its focus on solving a problem by sticking to the practical goal and avoiding digressions, while being flexible enough to accommodate variations in real-world use cases, rather than being limited to a single, narrow scenario.
+
+Q3: What is the difference between a tutorial and a how-to guide in terms of their approach to completeness?
+A3: While a tutorial needs to be a complete, end-to-end guide, a how-to guide does not. A how-to guide should start and end in a reasonable, meaningful place, requiring the reader to integrate it into their own work, prioritizing practical usability over completeness.
+
+Pay attention to naming:
+
+Q1: What is the key principle for choosing titles for how-to guides?
+A1: The key principle for choosing titles for how-to guides is to say exactly what the guide shows, clearly indicating the problem or task that the guide addresses.
+
+Q2: How can a poorly chosen title for a how-to guide mislead users and undermine the effectiveness of the documentation?
+A2: A poorly chosen title, such as one that does not clearly indicate whether the guide is about how to do something or whether to do it, can mislead users and cause frustration when the content does not match their expectations, undermining the effectiveness of the documentation.
+
+Q3: Why do search engines appreciate well-chosen titles for how-to guides?
+A3: Search engines appreciate well-chosen titles for how-to guides because they help users find the content they need more easily, improving the visibility and discoverability of the documentation in search results.
+
+The language of how-to guides:
+
+Q1: What is the purpose of using conditional imperatives in how-to guides?
+A1: Conditional imperatives, such as "If you want x, do y" or "To achieve w, do z," help guide the user through the steps required to solve a problem or achieve a specific goal, making the actions clear and concise.
+
+Q2: How should a how-to guide handle references to additional information or options?
+A2: A how-to guide should refer to the relevant reference guide for a full list of options or additional information, rather than attempting to include every possible related action within the guide itself, which would pollute the practical focus of the guide.
+
+Q3: What is the importance of clearly describing the problem or task that a how-to guide addresses?
+A3: Clearly describing the problem or task that a how-to guide addresses helps set the context and expectations for the user, ensuring that they understand what the guide will help them accomplish and whether it is relevant to their needs.

@@ -1,0 +1,54 @@
+Explanation and reference:
+
+Q1: What is the main difference between explanation and reference in the context of the Diátaxis framework?
+A1: The main difference between explanation and reference is that explanation is focused on the acquisition of skill and knowledge (study), while reference is concerned with the application of that skill and knowledge (work).
+
+Q2: How do explanation and reference relate to the overall structure of the Diátaxis map?
+A2: Explanation and reference both belong to the theory half of the Diátaxis map, as they contain theoretical knowledge rather than steps to guide the reader. However, they serve different purposes within that theoretical realm, with explanation supporting learning and reference supporting doing.
+
+Q3: Why is it important to distinguish between explanation and reference when creating documentation?
+A3: Distinguishing between explanation and reference is important because they serve different user needs and require different approaches to content creation. Mixing the two can lead to less effective documentation that fails to fully support either the acquisition or application of knowledge and skills.
+
+A straightforward distinction, mostly:
+
+Q1: What are some examples of writing that are clearly either explanation or reference?
+A1: A tidal chart with tables of figures is a clear example of reference material, while an article that explains why there are tides and how they behave is self-evidently explanation.
+
+Q2: What are some good rules of thumb for distinguishing between explanation and reference?
+A2: Some good rules of thumb for distinguishing between explanation and reference are that reference material is often boring and unmemorable, consists of lists of things (such as classes, methods, or attributes) and tables of information. Explanation, on the other hand, is more engaging and can be imagined being read in a relaxed setting or discussed with a friend.
+
+Q3: How can the question "Can you tell me more about...?" help to identify whether a piece of content is likely to be explanation or reference?
+A3: If you can imagine asking a friend, "Can you tell me more about...?" and the answer or discussion that follows is likely to provide context, background, and deeper understanding of a topic, then the content is most likely explanation. Reference material, in contrast, would provide a more structured, factual response without the same level of elaboration.
+
+... but intuition isn't reliable enough:
+
+Q1: What is a common pitfall when writing reference material that can lead to the inclusion of explanatory content?
+A1: A common pitfall when writing reference material is the temptation to develop illustrative examples into more expansive explanations, using them to explore the "why," "what if," or "how it came to be" aspects of a topic. This can result in reference material being interrupted and obscured by digressions.
+
+Q2: Why is it problematic to mix explanatory content into reference material, and vice versa?
+A2: Mixing explanatory content into reference material is problematic because it interrupts and obscures the reference, making it harder for users to find the factual information they need. Similarly, including reference-style content in explanation can prevent the explanation from developing properly and fulfilling its purpose of providing deeper understanding and context.
+
+Q3: How can being aware of the potential to slip between explanation and reference help documentation authors create more effective content?
+A3: By being aware of the potential to slip between explanation and reference, documentation authors can be more intentional about keeping each type of content focused on its specific purpose. This allows reference material to remain concise and factual, while enabling explanation to fully explore and contextualize a topic, ultimately leading to more effective documentation that better serves users' needs.
+
+Work and study:
+
+Q1: What is the key question to ask when determining whether a piece of content should be classified as reference or explanation?
+A1: The key question to ask when determining whether a piece of content should be classified as reference or explanation is: "Is this something someone would turn to while working and actively getting something done, or is it something they would need when they have stepped away from the work and want to think about it more deeply?"
+
+Q2: How does the distinction between work and study reflect the reader's relationship to the craft or topic being documented?
+A2: The distinction between work and study reflects the reader's relationship to the craft or topic at a particular moment. When working, the reader is actively engaged in applying their knowledge and skills to complete a task. When studying, the reader is focused on acquiring new knowledge and skills or deepening their understanding of a topic.
+
+Q3: Why is understanding the distinction between work and study crucial for creating effective reference and explanation content?
+A3: Understanding the distinction between work and study is crucial for creating effective reference and explanation content because it helps documentation authors tailor their content to the specific needs of users at different points in their engagement with a topic. By providing the right type of content for each context, authors can better support users in both the acquisition and application of knowledge and skills.
+
+The compass:
+
+Q1: What is the purpose of "The compass" in the context of distinguishing between reference and explanation content?
+A1: "The compass" is a tool or framework mentioned in the text that can help documentation authors avoid being misled by intuition when deciding whether a piece of content should be classified as reference or explanation.
+
+Q2: How can documentation authors use "The compass" to ensure they are creating content that effectively meets users' needs?
+A2: By referring to "The compass," documentation authors can more objectively assess whether a piece of content aligns with the needs of users who are actively working and applying knowledge (reference) or those who are studying and acquiring knowledge (explanation). This helps them create content that is more closely tailored to the specific context and needs of each user group.
+
+Q3: What are the key characteristics of reference and explanation content, according to the summary provided at the end of the document?
+A3: According to the summary, reference content is what a user needs to help them apply knowledge and skill while they are actively working, while explanation content is what someone will turn to when they want to acquire knowledge and skill through study. Understanding and responding to these distinct needs is key to creating effective reference and explanation content.

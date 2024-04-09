@@ -1,0 +1,55 @@
+The distinction between functional quality and deep quality:
+
+Q1: What is the main difference between functional quality and deep quality in documentation?
+A1: Functional quality is objective and can be measured against the world, while deep quality is subjective and assessed against the human user's experience.
+
+Q2: Can documentation have functional quality without exhibiting deep quality?
+A2: Yes, documentation can meet all the demands of functional quality, such as accuracy and consistency, and still fail to exhibit deep quality, such as feeling good to use or anticipating the user's needs.
+
+Q3: Are the characteristics of functional quality and deep quality independent of each other?
+A3: No, while the characteristics of functional quality are independent of each other, those of deep quality are interdependent and hard to disentangle.
+
+Q4: Is deep quality conditional upon functional quality in documentation?
+A4: Yes, deep quality is conditional upon functional quality. Documentation will never have deep quality without being accurate, complete, and consistent.
+
+Characteristics of functional quality and deep quality:
+
+Q5: What are some examples of characteristics of functional quality in documentation?
+A5: Examples of characteristics of functional quality in documentation include accuracy, completeness, consistency, usefulness, and precision.
+
+Q6: Can the characteristics of functional quality be objectively measured?
+A6: Yes, the characteristics of functional quality can be objectively measured, sometimes even with numbers, such as measuring the completeness of documentation.
+
+Q7: What are some examples of characteristics of deep quality in documentation?
+A7: Examples of characteristics of deep quality in documentation include feeling good to use, having flow, fitting to human needs, being beautiful, and anticipating the user.
+
+Q8: Can the characteristics of deep quality be objectively measured?
+A8: No, the characteristics of deep quality cannot be objectively measured. They can only be enquired into and assessed through judgement, not measurements.
+
+Recognizing deep quality in documentation:
+
+Q9: Is it necessary to be an expert to recognize when documentation has deep quality?
+A9: No, even someone who can't recognize or understand the specific characteristics that make documentation excellent can still realize that it is excellent because it feels good to use and fits their needs well.
+
+Q10: How can users recognize deep quality in documentation, even if they can't articulate why it's good?
+A10: Users can recognize deep quality in documentation by the pleasure and satisfaction they feel when using it, as it feels like it fits and moves with them, even if they can't articulate the specific reasons for its excellence.
+
+Q11: What do creators of documentation need to develop to produce work of deep quality?
+A11: Creators of documentation need to develop a clear and effective understanding of what makes documentation good, recognizing what is good about it and understanding how people will feel when using it.
+
+Q12: Can users mistake the more obvious aspects of functional quality for deeper excellence in documentation?
+A12: Yes, users may recognize only the more obvious aspects of functional quality in documentation, mistaking those for its deeper excellence, but what matters is that the documentation feels good to use.
+
+The role of Diátaxis in achieving quality:
+
+Q13: Can Diátaxis address functional quality in documentation directly?
+A13: No, Diátaxis cannot address functional quality in documentation directly, as it is concerned only with certain aspects of deep quality.
+
+Q14: How can Diátaxis serve functional quality, even if it cannot address it directly?
+A14: Diátaxis can serve functional quality by exposing lapses in it, such as making gaps in reference documentation more visible or highlighting sections in tutorials where the reader is left to work something out for themselves.
+
+Q15: How does Diátaxis help documentation fit user needs?
+A15: Diátaxis helps documentation fit user needs by describing documentation modes that are based on user needs, ensuring that the categories, arrangement of material, relationships, form, and language are all in response to those needs.
+
+Q16: Can using Diátaxis guarantee deep quality in documentation?
+A16: No, using Diátaxis does not guarantee deep quality in documentation, as it offers a set of principles, not a formula or a shortcut bypassing the need for skills and insights from disciplines like user experience, interaction design, or visual design.

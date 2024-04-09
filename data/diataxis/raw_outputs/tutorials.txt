@@ -1,0 +1,164 @@
+Tutorials are learning-oriented:
+
+Q1: What is the primary goal of a tutorial in the context of product documentation?
+A1: The primary goal of a tutorial is to help a beginner achieve basic competence with a product, so that they can go on to use the product for their own purposes.
+
+Q2: How does a tutorial help a learner become successful with a product?
+A2: A tutorial helps a learner become successful with a product by having them do something both meaningful and attainable, demonstrating that they can achieve success with the product.
+
+Q3: What type of knowledge is a tutorial concerned with, and how does it differ from theoretical knowledge?
+A3: A tutorial is concerned with practical knowledge, or skill, rather than theoretical knowledge. It is focused on learning how to do something, rather than learning about something.
+
+The tutorial as a lesson:
+
+Q1: What is the key factor that determines what a pupil will learn in a lesson?
+A1: What matters most in determining what a pupil will learn is what the teacher gets the pupil to do, rather than the facts and explanations presented in the teaching.
+
+Q2: How can a tutorial provide a learning experience for the user?
+A2: A tutorial can provide a learning experience by focusing on what the user does, guiding them through a series of steps and activities that enable them to learn.
+
+Q3: What is the relationship between a teacher and a pupil in the context of a lesson?
+A3: In a lesson, there is a relationship between the teacher and the pupil, where the teacher has responsibility for what the pupil will learn, what the pupil will do to learn it, and for the pupil's success.
+
+Obligations of the teacher:
+
+Q1: What are the key responsibilities of the teacher in a tutorial lesson?
+A1: The teacher is responsible for determining what the pupil is to learn, what the pupil will do in order to learn it, and for ensuring the pupil's success in learning.
+
+Q2: What is the pupil's main responsibility in the context of a tutorial lesson?
+A2: The pupil's main responsibility is to be attentive and follow the teacher's directions as closely as they can. They are not responsible for learning, understanding, or remembering - only for doing things as directed.
+
+Q3: What are the key characteristics of the exercise that a teacher puts a pupil through in a tutorial?
+A3: The exercise a teacher puts a pupil through in a tutorial must be meaningful (providing a sense of achievement), successful (able to be completed), logical (following a path that makes sense), and usefully complete (encountering all necessary actions, concepts, and tools).
+
+The problem of tutorials:
+
+Q1: Why are tutorials often considered the weakest part of documentation?
+A1: Tutorials are often the weakest part of documentation because they are the most misunderstood and the most difficult to do well, leading to many software projects having poor or non-existent tutorials.
+
+Q2: How does the effort required to create and maintain tutorials compare to other parts of documentation?
+A2: The effort required to create and maintain tutorials is much greater than that required for other parts of documentation, as they demand a significant amount of work to ensure they continue to provide an effective learning experience as the product evolves.
+
+Q3: Why are tutorials more prone to revisions compared to other parts of documentation?
+A3: Tutorials are more prone to revisions because, in addition to needing updates when the product changes, they may need to be completely rewritten if the author discovers a better way to produce a learning experience for the pupil.
+
+Food and cooking:
+
+Q1: What is the most important outcome when teaching a child to cook?
+A1: The most important outcome when teaching a child to cook is that the child enjoys the experience of working in the kitchen, gains confidence, and wants to do it again.
+
+Q2: How does a child learn important things about cooking over time?
+A2: A child learns important things about cooking through repetition, over time, such as how to hold a knife, the importance of washing hands before handling food, how to use measuring equipment, and how to time things.
+
+Q3: How should a teacher handle a situation where a lesson with a young child has to end before completing what was set out to do?
+A3: When a lesson with a young child has to end before completing the planned activities, it is normal and expected. As long as the child achieved something, however small, and enjoyed doing it, they will have laid down a foundation in their technical expertise that can be built upon next time.
+
+Writing a good tutorial:
+
+Q1: What is the main goal of a tutorial, and how can it be achieved?
+A1: The main goal of a tutorial is to allow the user to learn, which can be achieved by giving them things to do through which they can learn, rather than trying to teach them directly.
+
+Q2: What are some common anti-pedagogical temptations that should be avoided when writing a tutorial?
+A2: Common anti-pedagogical temptations to avoid when writing a tutorial include abstraction, generalization, explanation, offering choices, and providing excessive information.
+
+Q3: How should a tutorial introduce the user to the tools and operations they need to become familiar with?
+A3: A tutorial should introduce the user to the tools and operations they need to become familiar with by leading them through steps that use these tools and perform these operations, building up from the simplest ones at the start to more complex ones.
+
+Get the user started:
+
+Q1: What is the main purpose of a tutorial for beginners?
+A1: The main purpose of a tutorial for beginners is to get the learner started and help them set out safely on their journey, not to turn them into an expert or get them to a final destination.
+
+Q2: Why is it acceptable for a tutorial to teach beginners in a way that is not necessarily the way an experienced person would do things?
+A2: It is acceptable for a tutorial to teach beginners in a way that is not how an experienced person would do things because a tutorial for beginners is not the same as a manual for best practice. The focus is on helping the learner get started, not on teaching the most optimal methods.
+
+Q3: When is it reasonable to set a higher threshold for the starting level of a tutorial?
+A3: It is reasonable to set a higher threshold for the starting level of a tutorial if you decide that you don't want the responsibility of teaching beginners below a certain level, or if you judge that a certain level of skill is a reasonable prerequisite for using the product at all.
+
+Provide a complete picture before they start:
+
+Q1: Why is it important to allow the learner to form an idea of what they will achieve right from the start of a tutorial?
+A1: Allowing the learner to form an idea of what they will achieve right from the start helps set expectations and enables them to see themselves building towards the completed goal as they work through the tutorial.
+
+Q2: How can providing the learner with a complete picture at the beginning of a tutorial be accomplished?
+A2: Providing the learner with a complete picture at the beginning of a tutorial can be as simple as informing them of what they will build or accomplish by the end of the tutorial, such as creating a specific type of application or deploying it using a particular tool.
+
+Q3: Why should surprising the learner with the result at the end of a tutorial be avoided?
+A3: Surprising the learner with the result at the end of a tutorial should be avoided because it diminishes, rather than augments, the value of what they achieve. It is better to provide a clear picture of the end goal from the start.
+
+Ensure that the tutorial works reliably:
+
+Q1: What is one of the most important requirements for building a learner's confidence in a tutorial?
+A1: One of the most important requirements for building a learner's confidence in a tutorial is ensuring that what you ask the beginner to do must work reliably.
+
+Q2: How can a tutorial maintain a friendly tone and logical progression?
+A2: A tutorial can maintain a friendly tone through consistent use of language and by following a logical progression through the material, building up the learner's knowledge and skills step by step.
+
+Q3: Why is it important to create a reliable experience in a tutorial, even though it may be hard work?
+A3: Creating a reliable experience in a tutorial is important because the learner needs to see that when they follow your directions, they will attain the results you promise, which is essential for building their confidence and keeping them engaged.
+
+Ensure the user sees results immediately:
+
+Q1: Why should a tutorial ensure that the user sees results immediately after performing an action?
+A1: A tutorial should ensure that the user sees results immediately after performing an action because the effect of every action should be clear to them as soon as possible, making the relation of cause and effect evident.
+
+Q2: What should be the nature of the results that a user sees after each step in a tutorial?
+A2: Each result that a user sees after following a step in a tutorial should be something that they can perceive as meaningful, however small it may be.
+
+Q3: How can a tutorial help users who are doing new and strange things that they don't understand?
+A3: A tutorial can help users who are doing new and strange things that they don't understand by ensuring that every step they follow produces a comprehensible result, allowing them to see the effects of their actions and build understanding incrementally.
+
+Make your tutorial repeatable:
+
+Q1: Why is it extremely hard to achieve repeatable reliability in a tutorial?
+A1: Achieving repeatable reliability in a tutorial is extremely hard because users will have different levels of skill and understanding, and may be using different tools and operating systems, making it difficult to ensure a consistent experience for all.
+
+Q2: What is the importance of making a tutorial work for all users, every time?
+A2: Making a tutorial work for all users, every time, is crucial because it ensures that the learning experience is consistent and reliable, regardless of the user's background or environment.
+
+Q3: What is the only way to ensure that a tutorial continues to work as expected over time?
+A3: The only way to ensure that a tutorial continues to work as expected over time is to test it regularly, making sure that it remains reliable and effective for all users.
+
+Describe concrete steps, not abstract concepts:
+
+Q1: What should a tutorial be composed of, and what should it avoid?
+A1: A tutorial should be composed of concrete steps and specific, particular actions and outcomes. It should avoid abstract discussions and resist the temptation to introduce abstraction.
+
+Q2: How does learning proceed, and what does this mean for the structure of a tutorial?
+A2: Learning proceeds from the particular and concrete to the general and abstract. A tutorial should focus on providing concrete examples and steps, leaving abstract concepts and patterns for later, after the learner has gained sufficient experience.
+
+Q3: Why is it hard to resist the temptation to introduce abstraction in a tutorial?
+A3: It is hard to resist the temptation to introduce abstraction in a tutorial because once we have grasped something, we rely on the power of abstraction to frame it to ourselves, and we want to frame it to others in the same way. However, this is not how learning or successful teaching works.
+
+Offer only minimum, necessary, explanation:
+
+Q1: What should be the approach to providing explanations in a tutorial?
+A1: In a tutorial, explanations should be provided only if the learner needs them to complete the tutorial. If an explanation is not necessary for the learner to follow the steps and achieve the desired result, it should be omitted.
+
+Q2: How can a tutorial handle situations where some explanation seems necessary, but a full discussion is not required?
+A2: When some explanation seems necessary, but a full discussion is not required, a tutorial can provide a brief, simple explanation, such as stating that a particular technology is being used because it is more secure, without going into extensive detail.
+
+Q3: What should a tutorial do if the author feels that additional explanatory material is required?
+A3: If the author feels that additional explanatory material is required, they can include links to further resources, but should resist the temptation to interrupt the flow of the tutorial by digressing into lengthy explanations.
+
+Ignore options and alternatives:
+
+Q1: What should be the focus of a tutorial when guiding the learner?
+A1: When guiding the learner, a tutorial should focus on what is required to reach the desired conclusion, ignoring any interesting diversions, options, or alternatives along the way.
+
+Q2: How does ignoring options and alternatives benefit a tutorial?
+A2: Ignoring options and alternatives helps keep a tutorial shorter and crisper, saving both the author and the reader from having to do extra cognitive work.
+
+Q3: When should the learner explore different options, ways of using an API, or approaches to a task?
+A3: The learner should explore different options, ways of using an API, or approaches to a task at a later time, after they have successfully completed the tutorial and reached the desired conclusion.
+
+The language of tutorials:
+
+Q1: How should a tutorial describe what the learner will accomplish?
+A1: A tutorial should describe what the learner will accomplish using language like "In this tutorial, you will...", focusing on the outcome they will achieve, rather than what they will learn.
+
+Q2: What kind of language should be used when providing explanations in a tutorial?
+A2: When providing explanations in a tutorial, the language should be as basic as possible, offering minimal explanation of actions and linking to more detailed information if necessary.
+
+Q3: How can a tutorial help the learner confirm they are on the right track and orient themselves?
+A3: A tutorial can help the learner confirm they are on the right track and orient themselves by providing plenty of clues, using language like "Notice that..." or "Remember that..." to draw attention to key points and reinforce understanding.

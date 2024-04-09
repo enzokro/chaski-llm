@@ -1,0 +1,65 @@
+What they have in common:
+
+Q1: How are tutorials and how-to guides similar in terms of their practical nature and the presence of directions for the user to follow?
+A1: Both tutorials and how-to guides are practical guides that contain directions for the user to follow, guiding the user in what to do rather than what there is to know or understand. They set out steps for the reader to follow and promise a successful conclusion if the steps are followed correctly.
+
+Q2: What is the importance of the order in which actions are performed in both tutorials and how-to guides?
+A2: In both tutorials and how-to guides, the order in which actions are performed is crucial. The reader cannot expect success unless they perform the actions in the right sequence, as described in the guide.
+
+Q3: Why can tutorials and how-to guides be easily mistaken for one another at first glance?
+A3: Tutorials and how-to guides can be easily mistaken for one another because they are closely related, sharing similarities such as describing ordered sequences of actions and requiring the user to have their hands on the machinery, ready to do things.
+
+What matters is what the user needs:
+
+Q1: How does Diátaxis distinguish between tutorials and how-to guides based on user needs?
+A1: Diátaxis distinguishes between tutorials and how-to guides by focusing on the needs of the user. A tutorial serves the needs of the user who is at study, with the obligation to provide a successful learning experience. A how-to guide serves the needs of the user who is at work, with the obligation to help the user accomplish a task.
+
+Q2: What is the key difference between the orientation of tutorials and how-to guides?
+A2: The key difference between the orientation of tutorials and how-to guides is that tutorials are learning-oriented, focused on helping the user acquire skills, while how-to guides are task-oriented, focused on helping the user apply their skills to accomplish a specific task.
+
+Q3: How does the distinction between tutorials and how-to guides relate to the different needs and obligations of documentation?
+A3: The distinction between tutorials and how-to guides matters because it reflects the completely different needs and obligations of documentation in serving users who are either at study (acquiring skills) or at work (applying skills). Recognizing and addressing these distinct needs is crucial for creating effective documentation.
+
+At study and at work:
+
+Q1: In the example of a doctor learning to suture a wound, what key aspects of the learning experience make it a tutorial?
+A1: The key aspects that make the wound suturing lesson a tutorial are the presence of a controlled learning environment, step-by-step guidance from a tutor, the opportunity for the learner to practice and make mistakes, and the focus on acquiring basic competence through hands-on experience.
+
+Q2: How does the clinical manual for an appendectomy demonstrate the characteristics of a how-to guide?
+A2: The clinical manual for an appendectomy demonstrates the characteristics of a how-to guide by assuming the user's competence, providing step-by-step guidance for accomplishing a specific task, including variations based on real-world conditions, and serving as a reference for the user's work rather than a learning tool.
+
+Q3: What is the key difference between the doctor's need for a tutorial when learning to suture and their need for a how-to guide when performing an appendectomy?
+A3: The key difference is that when learning to suture, the doctor is in a study situation, needing a safe, controlled environment to acquire a new skill, while when performing an appendectomy, the doctor is in a work situation, needing guidance to apply their existing skills to accomplish a specific task in the real world.
+
+Understanding the distinction:
+
+Q1: What is the primary purpose of a tutorial, and how does it differ from the purpose of a how-to guide?
+A1: The primary purpose of a tutorial is to help the pupil acquire basic competence through a learning experience, while the purpose of a how-to guide is to help the already-competent user perform a particular task correctly by directing their work.
+
+Q2: How do tutorials and how-to guides differ in their approach to the user's familiarity with tools, language, processes, and the behavior of what they're working with?
+A2: Tutorials aim to familiarize the learner with tools, language, processes, and the behavior of what they're working with through structured, repeatable encounters in a contrived setting. How-to guides assume the user's familiarity with these elements and apply to real-world situations.
+
+Q3: What is the difference between the way tutorials and how-to guides handle the possibility of the unexpected or choices and alternatives?
+A3: Tutorials eliminate the unexpected and do not offer choices or alternatives, following a single, managed path. How-to guides must prepare for the unexpected, alerting the user to its possibility and providing guidance on how to deal with it, and often present different routes to the same destination.
+
+The basic and the advanced:
+
+Q1: Why is it a common but understandable conflation to see the difference between tutorials and how-to guides as the difference between basic and advanced content?
+A1: It is a common conflation because tutorials are often associated with learners and covering the basics, while how-to guides are often associated with already-skilled practitioners and dealing with complexities. However, this distinction does not fully capture the difference between the two types of documentation.
+
+Q2: How can a how-to guide cover basic or well-known procedures, despite being intended for already-skilled practitioners?
+A2: A how-to guide can cover basic or well-known procedures because its purpose is to help the user accomplish a specific task, regardless of the complexity of that task. Even basic tasks require guidance to ensure they are performed correctly and safely in the real world.
+
+Q3: What is the key factor that determines whether a piece of documentation is a tutorial or a how-to guide, regardless of its complexity?
+A3: The key factor that determines whether a piece of documentation is a tutorial or a how-to guide is the need it serves: if it is aimed at helping the user in their study and acquisition of skills, it is a tutorial; if it is aimed at helping the user in their work and application of skills, it is a how-to guide, regardless of the complexity of the content.
+
+Safety and success:
+
+Q1: How can conflating education with practice in a clinical manual have serious consequences, and what does this illustrate about the importance of distinguishing between tutorials and how-to guides?
+A1: Conflating education with practice in a clinical manual can have deadly consequences, as it fails to address the distinct needs of users who are either learning a skill or applying it in real-world situations. This illustrates the crucial importance of distinguishing between tutorials and how-to guides to ensure the safety and success of the user.
+
+Q2: How can failing to distinguish between tutorials and how-to guides in software documentation impact users and the success of the product?
+A2: Failing to distinguish between tutorials and how-to guides in software documentation can lead to user frustration and inconvenience, as the documentation fails to meet their specific needs at different stages of their interaction with the product. This can ultimately drive users away from the product if they find alternatives that better address their needs.
+
+Q3: Why is the conflation of tutorials and how-to guides particularly harmful to newcomers, and how can getting the distinction right contribute to the success of the product?
+A3: The conflation of tutorials and how-to guides is particularly harmful to newcomers because it risks failing to provide them with the appropriate learning experiences and guidance they need to become committed users of the product. Getting the distinction right is a key to success, as it ensures that the documentation effectively supports users throughout their journey, from initial acquisition of skills to real-world application.

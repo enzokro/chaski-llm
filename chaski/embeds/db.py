@@ -1,7 +1,6 @@
 """Embedding storage module for the chaski-llm application."""
 
 import hashlib
-import logging
 import os
 from typing import Dict, List, Optional, Tuple
 
